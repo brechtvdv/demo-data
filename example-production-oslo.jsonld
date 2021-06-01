@@ -1,0 +1,48 @@
+{
+	"@context": ["https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/kandidaatstandaard/2020-07-17/context/cultureel-erfgoed-object-ap.jsonld", 
+                 "https://data.vlaanderen.be/context/persoon-basis.jsonld", 
+                 "https://brechtvdv.github.io/demo-data/cultureel-erfgoed-event-ap.jsonld"
+                ],
+	"@id": "https://stad.gent/id/mensgemaaktobject/dmg/530026423/2021-05-21T17:12:34.363Z",
+	"@type": "MensgemaaktObject",
+	"Object.identificator": {
+		"@type": "Identificator",
+		"Identificator.identificator": ["2017-0452"]
+	},
+	"MaterieelDing.productie": [{
+		"@type": "Productie",
+		"Productie.product": "https://stad.gent/id/mensgemaaktobject/dmg/530026423",
+		"Gebeurtenis.tijd": {
+			"@value": "1997~",
+			"@type": "http://id.loc.gov/datatypes/edtf/EDTF"
+		},
+		"Activiteit.uitgevoerdDoor": {
+			"@id": "https://stad.gent/id/entiteit/530001198",
+			"@type": "Agent",
+			"label": {
+				"@value": "Nova",
+				"@language": "nl"
+			}
+		},
+		"Gebeurtenis.plaats": {
+			"@id": "http://vocab.getty.edu/page/tgn/7008015",
+			"skos:prefLabel": {
+				"@value": "Tongeren",
+				"@language": "nl"
+			}
+		},
+		"@reverse": {
+			"Rol.activiteit": {
+				"@type": "Rol",
+				"Rol.agent": "https://stad.gent/id/entiteit/530001198",
+				"Rol.rol": {
+					"@id": "https://stad.gent/id/concept/530006016",
+					"skos:prefLabel": {
+						"@value": "producent",
+						"@language": "nl"
+					}
+				}
+			}
+		}
+	}]
+}
