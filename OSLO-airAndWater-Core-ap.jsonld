@@ -43,10 +43,6 @@
       "@id": "https://schema.org/image",
       "@type": "@id"
     },
-    "Device.manufacturerName": {
-      "@id": "https://smart-data-models.github.io/data-models/terms.jsonld#/definitions/manufacturerName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
     "DeviceManufacturerName": {
       "@id": "https://smart-data-models.github.io/data-models/terms.jsonld#/definitions/manufacturerName",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
