@@ -166,7 +166,7 @@
       "@id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
       "@type": "@id"
     },
-    "ObservationCollection.madeBySensor": {
+    "ObservationCollectionMadeBySensor": {
       "@id": "http://www.w3.org/ns/sosa/madeBySensor",
       "@type": "@id"
     },
