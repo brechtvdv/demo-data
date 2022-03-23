@@ -1,0 +1,192 @@
+{
+  "@context": {
+		"@base": "https://private-api.gipod.test-vlaanderen.be",
+		"id": "@id",
+		"value": "@value",
+		"type": "@type",
+		"@language": "nl-BE",
+		"PublicDomainOccupancy": {
+			"@id": "Inname"
+		},
+		"Groundwork": {
+			"@id": "Grondwerk"
+		},
+		"Work": {
+			"@id": "Werk"
+		},
+		"Event": {
+			"@id": "Evenement"
+		},
+		"MobilityHindrance": {
+			"@id": "Mobiliteitshinder"
+		},
+		"SignalingPermit": {
+			"@id": "Signalisatievergunning"
+		},
+		"TrenchSynergyRequest": {
+			"@id": "Synergieaanvraag"
+		},
+		"TrenchSynergy": {
+			"@id": "Synergie"
+		},
+		"Organisation": {
+			"@id": "Organisatie"
+		},
+		"Identifier": {
+			"@id": "Identificator"
+		},
+        "Identifier.identifier": {
+          "@id": "Identificator.identificator"
+        },
+		"identifier": {
+			"@id": "Object.identificator",
+          	"@type": "@id"
+		},
+		"ContactOrganisationInRole": {
+			"@id": "http://www.w3.org/ns/org#Organization"
+		},
+		"AddressRepresentation": {
+			"@id": "Adresvoorstelling"
+		},
+		"Geometry": {
+			"@id": "Geometrie"
+		},
+		"Period": {
+			"@id": "http://data.europa.eu/m8g/PeriodOfTime"
+		},
+		"PeriodWithDuration": {
+			"@id": "https://data.vlaanderen.be/ns/mobiliteit#PeriodeMetDuur"
+		},
+		"TimeSchedule": {
+			"@id": "Tijdschema"
+		},
+		"assignedByName": {
+			"@id": "http://www.w3.org/ns/adms#schemaAgency",
+          "@type": "@id"
+		},
+		"address": {
+			"@id": "adres",
+          	"@type": "@id"
+		},
+		"isPublic": {
+			"@id": "openbaarDomein"
+		},
+		"owner": {
+			"@id": "beheerder",
+			"@type": "@id"
+		},
+		"description": {
+			"@id": "beschrijving"
+		},
+		"duration": {
+			"@id": "duur"
+		},
+		"contactname": {
+			"@id": "contactnaam"
+		},
+		"contactOrganisation": {
+			"@id": "contactOrganisatie"
+		},
+		"telephone": {
+			"@id": "telefoon"
+		},
+		"category": {
+			"@id": "categorie"
+		},
+		"specification": {
+			"@id": "specificatie"
+		},
+		"isRelocationGroundwork": {
+			"@id": "https://data.vlaanderen.be/ns/mobiliteit#Grondwerk.verplaatsingswerk"
+		},
+		"causingGroundwork": {
+			"@id": "heeftOorzaakGrondwerk"
+		},
+		"period": {
+			"@id": "periode"
+		},
+		"start": {
+			"@id": "begin"
+		},
+		"end": {
+			"@id": "einde"
+		},
+		"periodDuration": {
+			"@id": "PeriodeMetDuur.duur"
+		},
+		"timeSchedule": {
+			"@id": "tijdschema"
+		},
+		"startDate": {
+			"@id": "startdatum"
+		},
+		"startTime": {
+			"@id": "starttijd"
+		},
+		"endDate": {
+			"@id": "einddatum"
+		},
+		"endTime": {
+			"@id": "eindtijd"
+		},
+		"consequence": {
+			"@id": "gevolg"
+		},
+		"status": {
+			"@id": "Inname.status"
+		},
+		"publicDomainOccupancyType": {
+			"@id": "Inname.type"
+		},
+		"hasConsequence": {
+			"@id": "heeftGevolg"
+		},
+		"estimatedDuration": {
+			"@id": "geschatteDuur"
+		},
+		"preferredName": {
+			"@id": "voorkeursNaam"
+		},
+		"zoneType": {
+			"@id": "Zone.type"
+		},
+		"byMonth": {
+			"@id": "perMaand"
+		},
+		"byMonthDay": {
+			"@id": "perDagVanDeMaand"
+		},
+		"repeatCount": {
+			"@id": "aantal"
+		},
+		"repeatFrequency": {
+			"@id": "frequentie"
+		},
+		"exceptDate": {
+			"@id": "uitzonderingsdatum"
+		},
+		"bySetPos": {
+			"@id": "perSetpositie"
+		},
+		"gipodId": {
+			"@type": "http://www.w3.org/2001/XMLSchema#integer",
+			"@id": "https://gipod.vlaanderen.be/ns/gipod#gipodId"
+		},
+		"reference": {
+			"@type": "http://www.w3.org/2001/XMLSchema#string",
+			"@id": "https://gipod.vlaanderen.be/ns/gipod#reference"
+		},
+		"remark": {
+			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+			"@id": "https://gipod.vlaanderen.be/ns/gipod#remark"
+		},
+		"addressRepresentation": {
+			"@type": "https://inspire-twg.jrc.ec.europa.eu/data-model/approved/r937/fc/#_C2538",
+			"@id": "https://www.w3.org/ns/locn#address"
+		},
+		"wkt": {
+			"@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
+			"@id": "http://www.opengis.net/ont/geosparql#asWKT"
+		}
+	}
+}
