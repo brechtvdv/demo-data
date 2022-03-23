@@ -1,5 +1,8 @@
 {
-  "@context": {
+  "@context": [
+	  "https://data.vlaanderen.be/context/generiek-basis.jsonld", 
+	  "https://data.vlaanderen.be/doc/applicatieprofiel/inname-openbaar-domein/ontwerpdocument/2018-05-10/context/inname-openbaar-domein.jsonld",
+	  {
 		"@base": "https://private-api.gipod.test-vlaanderen.be",
 		"id": "@id",
 		"value": "@value",
@@ -189,4 +192,5 @@
 			"@id": "http://www.opengis.net/ont/geosparql#asWKT"
 		}
 	}
+  ]
 }
