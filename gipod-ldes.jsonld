@@ -1,7 +1,7 @@
 {
   "@context": [
     "https://smartdata.dev-vlaanderen.be/base/gemeente/context",
-    "https://gist.githubusercontent.com/ddvlanck/357280736b7469d909f88b4050b0e5ec/raw/94ff59a29675b13c2f13bb828a0a41820405f59e/gipod-context.jsonld"
+    "https://brechtvdv.github.io/demo-data/gipod-ldes-context.jsonld"
   ],
   "@id": "https://private-api.gipod.test-vlaanderen.be/api/v1/mobility-hindrances?generatedAtTime=2020-12-21T15:15:59.817Z",
   "@type": "Node",
