@@ -210,6 +210,11 @@
             "@id": "https://data.vlaanderen.be/ns/mobiliteit#zone",
             "@type": "@id",
             "@container": "@set"
+         },
+         "isConsequenceOf": {
+            "@id": "https://gipod.vlaanderen.be/ns/gipod#isGevolgVan",
+            "@type": "@id",
+            "@container": "@set"
          }
       }
    ]
