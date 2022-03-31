@@ -205,6 +205,11 @@
          "wkt":{
             "@type":"http://www.opengis.net/ont/geosparql#wktLiteral",
             "@id":"http://www.opengis.net/ont/geosparql#asWKT"
+         },
+         "zone": {
+            "@id": "https://data.vlaanderen.be/ns/mobiliteit#zone",
+            "@type": "@id",
+            "@container": "@set"
          }
       }
    ]
