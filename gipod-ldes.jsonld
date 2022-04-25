@@ -89,7 +89,7 @@
       "generatedAtTime": "2020-12-21T15:15:59.817Z",
       "eventName": "MobilityHindranceWasImportedFromLegacy",
       "isVersionOf": "/api/v1/mobility-hindrances/10031313",
-      "memberOf": "https://private-api.gipod.test-vlaanderen.be/api/v1/mobility-hindrances",
+      "memberOf": "https://private-api.gipod.test-vlaanderen.be/api/v1/ldes/mobility-hindrances",
       "lastModifiedOn": "2020-12-04T16:07:15.69Z",
       "lastModifiedBy": {
         "@id": "/api/v1/organisations/6b023897-3708-08c7-bd41-fd107d57e0ce",
