@@ -62,7 +62,7 @@
     },
     "contactOrganisation": {
       "@id": "https://data.vlaanderen.be/ns/mobiliteit#contactOrganisatie",
-      "@type": "Organisation",
+      "@type": "@id",
       "@container": "@set"
     },
     "telephone": {
