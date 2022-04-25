@@ -227,6 +227,10 @@
     "view": "tree:view",
     "member": "tree:member",
     "relation": "tree:relation",
+    "memberOf": {
+      "@reverse": "member",
+      "@type": "@id"
+    },
     "timestampPath": {
       "@id": "ldes:timestampPath",
       "@type": "@id"
