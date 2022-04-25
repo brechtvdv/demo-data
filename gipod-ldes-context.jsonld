@@ -225,6 +225,10 @@
     "tree": "https://w3id.org/tree#",
     "eventName": "adms:versionNotes",
     "view": "tree:view",
+    "viewOf": {
+      "@reverse": "view",
+      "@type": "@id"
+    },
     "member": "tree:member",
     "relation": "tree:relation",
     "memberOf": {
@@ -259,6 +263,8 @@
     "isVersionOf": {
       "@id": "dct:isVersionOf",
       "@type": "@id"
-    }
+    },
+    "items": "@included",
+    "collectionInfo": "@included"
   }]
 }
