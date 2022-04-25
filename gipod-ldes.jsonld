@@ -1,6 +1,5 @@
 {
   "@context": [
-    "https://smartdata.dev-vlaanderen.be/base/gemeente/context",
     "https://brechtvdv.github.io/demo-data/gipod-ldes-context.jsonld",
     {
       "@base": "https://private-api.gipod.vlaanderen.be/api/v1/"
