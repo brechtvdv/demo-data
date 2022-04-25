@@ -6,19 +6,19 @@
       "@base": "https://private-api.gipod.vlaanderen.be/api/v1/"
     }
   ],
-  "@id": "https://private-api.gipod.test-vlaanderen.be/api/v1/mobility-hindrances?generatedAtTime=2020-12-21T15:15:59.817Z",
+  "@id": "https://private-api.gipod.test-vlaanderen.be/api/v1/ldes/mobility-hindrances?generatedAtTime=2020-12-21T15:15:59.817Z",
   "@type": "Node",
-  "viewOf": "https://private-api.gipod.test-vlaanderen.be/api/v1/mobility-hindrances",
+  "viewOf": "https://private-api.gipod.test-vlaanderen.be/api/v1/ldes/mobility-hindrances",
   "collectionInfo": {
-    "@id": "https://private-api.gipod.test-vlaanderen.be/api/v1/mobility-hindrances",
+    "@id": "https://private-api.gipod.test-vlaanderen.be/api/v1/ldes/mobility-hindrances",
     "@type": "EventStream",
-    "shape": "https://private-api.gipod.test-vlaanderen.be/api/v1/mobility-hindrances/shape",
+    "shape": "https://private-api.gipod.test-vlaanderen.be/api/v1/ldes/mobility-hindrances/shape",
     "timestampPath": "prov:generatedAtTime",
     "versionOfPath": "dct:isVersionOf"
   },
   "tree:relation": [
     {
-      "tree:node": "https://private-api.gipod.test-vlaanderen.be/api/v1/mobility-hindrances?generatedAtTime=2020-12-21T15:19:00.19Z",
+      "tree:node": "https://private-api.gipod.test-vlaanderen.be/api/v1/ldes/mobility-hindrances?generatedAtTime=2020-12-21T15:19:00.19Z",
       "@type": "tree:GreaterThanRelation",
       "tree:path": "prov:generatedAtTime",
       "tree:value": "2020-12-21T15:19:00.19Z"
