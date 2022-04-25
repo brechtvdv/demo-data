@@ -26,12 +26,11 @@
     "Zone": "https://data.vlaanderen.be/ns/mobiliteit#Zone",
     "identifier": {
       "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/ns/adms#Identifier",
+      "@type": "@id",
       "@container": "@set"
     },
     "Identifier.identifier": {
-      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-      "@type": "xsd:string"
+      "@id": "http://www.w3.org/2004/02/skos/core#notation"
     },
     "assignedByName": {
       "@id": "http://www.w3.org/ns/adms#schemaeAgency",
