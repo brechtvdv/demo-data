@@ -23,6 +23,7 @@
     "Period": "http://data.europa.eu/m8g/PeriodOfTime",
     "PeriodWithDuration": "https://data.vlaanderen.be/ns/mobiliteit#PeriodeMetDuur",
     "TimeSchedule": "https://schema.org/Schedule",
+    "Zone": "https://data.vlaanderen.be/ns/mobiliteit#Zone",
     "identifier": {
       "@id": "http://www.w3.org/ns/adms#identifier",
       "@type": "http://www.w3.org/ns/adms#Identifier",
