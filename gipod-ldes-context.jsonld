@@ -40,17 +40,13 @@
       "@id": "http://www.w3.org/ns/locn#address",
       "@type": "@id"
     },
-    "owner": {
-      "@id": "https://data.vlaanderen.be/ns/mobiliteit#beheerder",
-      "@type": "@id"
-    },
     "isPublic": {
       "@id": "https://data.vlaanderen.be/ns/mobiliteit#Inname.openbaarDomein",
       "@type": "xsd:boolean"
     },
     "owner": {
       "@id": "https://data.vlaanderen.be/ns/mobiliteit#beheerder",
-      "@type": "Organisation"
+      "@type": "@id"
     },
     "description": {
       "@id": "http://purl.org/dc/terms/description",
