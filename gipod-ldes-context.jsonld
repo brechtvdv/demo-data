@@ -198,7 +198,7 @@
       "@id": "https://gipod.vlaanderen.be/ns/gipod#gipodId"
     },
     "isConsequenceOf": {
-      "@id": "https://gipod.vlaanderen.be/ns/gipod#isGevolgVan",
+      "@reverse": "https://data.vlaanderen.be/ns/mobiliteit#Inname.heeftGevolg",
       "@type": "@id"
     },
     "permittedBy": {
