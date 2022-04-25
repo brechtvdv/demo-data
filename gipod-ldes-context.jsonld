@@ -70,6 +70,10 @@
       "@type": "xsd:string",
       "@container": "@set"
     },
+    "preferredName": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
     "category": {
       "@id": "https://data.vlaanderen.be/ns/mobiliteit#Grondwerk.categorie",
       "@type": "@id"
