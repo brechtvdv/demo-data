@@ -188,8 +188,7 @@
       "@type": "@id"
     },
     "gipodId": {
-      "@id": "https://gipod.vlaanderen.be/ns/gipod#gipodId",
-      "@type": "xsd:integer"
+      "@id": "https://gipod.vlaanderen.be/ns/gipod#gipodId"
     },
     "isConsequenceOf": {
       "@id": "https://gipod.vlaanderen.be/ns/gipod#isGevolgVan",
