@@ -33,8 +33,8 @@
       "@id": "http://www.w3.org/2004/02/skos/core#notation"
     },
     "assignedByName": {
-      "@id": "http://www.w3.org/ns/adms#schemaeAgency",
-      "@type": "@id"
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "xsd:string"
     },
     "address": {
       "@id": "http://www.w3.org/ns/locn#address",
