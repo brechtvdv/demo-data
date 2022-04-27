@@ -168,8 +168,7 @@
       "@type": "xsd:integer"
     },
     "repeatFrequency": {
-      "@id": "http://schema.org/repeatFrequency",
-      "@type": "xsd:string"
+      "@id": "http://schema.org/repeatFrequency"
     },
     "exceptDate": {
       "@id": "http://schema.org/exceptDate",
