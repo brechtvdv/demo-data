@@ -33,7 +33,7 @@
           "@type": "Identifier",
           "Identifier.identifier": {
             "value": "10031313",
-            "type": "gipodId"
+            "type": "https://gipod.vlaanderen.be/ns/gipod#gipodId"
           },
           "assignedByName": "https://gipod.vlaanderen.be"
         }
