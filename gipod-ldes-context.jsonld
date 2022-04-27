@@ -198,8 +198,7 @@
       "@type": "@id"
     },
     "prefLabel": {
-      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "@type": "xsd:string"
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel"
     },
     "reference": {
       "@id": "https://gipod.vlaanderen.be/ns/gipod#reference",
