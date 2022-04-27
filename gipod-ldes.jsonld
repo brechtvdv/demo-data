@@ -2,7 +2,7 @@
   "@context": [
     "https://brechtvdv.github.io/demo-data/gipod-ldes-context.jsonld",
     {
-      "@base": "https://private-api.gipod.vlaanderen.be/api/v1/"
+      "@base": "https://private-api.gipod.test-vlaanderen.be/"
     }
   ],
   "@id": "https://private-api.gipod.test-vlaanderen.be/api/v1/ldes/mobility-hindrances?generatedAtTime=2020-12-21T15:15:59.817Z",
