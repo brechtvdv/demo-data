@@ -6,6 +6,8 @@
     "type": "@type",
     "@language": "nl-BE",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dct": "http://purl.org/dc/terms/",
+    "dc": "http://purl.org/dc/elements/1.1",
     "PublicDomainOccupancy": "https://data.vlaanderen.be/ns/mobiliteit#Inname",
     "Groundwork": "https://data.vlaanderen.be/ns/mobiliteit#Grondwerk",
     "Work": "https://data.vlaanderen.be/ns/mobiliteit#Werk",
@@ -217,10 +219,25 @@
         "@id": "https://data.vlaanderen.be/ns/mobiliteit#zone",
         "@type": "@id",
         "@container": "@set"
+    },
+    "lastModifiedOn": {
+        "@id": "dct:modified",
+        "@type": "xsd:dateTime"
+    },
+    "lastModifiedBy": {
+        "@id": "dc:contributor",
+        "@type": "@id"
+    },
+    "createdOn": {
+        "@id": "dct:created",
+        "@type": "xsd:dateTime"
+    },
+    "createdBy": {
+        "@id": "dc:creator",
+        "@type": "@id"
     }
   }, {
     "adms": "http://www.w3.org/ns/adms#",
-    "dct": "http://purl.org/dc/terms/",
     "prov": "http://www.w3.org/ns/prov#",
     "ldes": "https://w3id.org/ldes#",
     "tree": "https://w3id.org/tree#",
