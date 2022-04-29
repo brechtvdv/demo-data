@@ -242,6 +242,7 @@
     "tree": "https://w3id.org/tree#",
     "eventName": "adms:versionNotes",
     "EventStream": "ldes:EventStream",
+    "Node": "tree:Node",
     "view": "tree:view",
     "viewOf": {
       "@reverse": "view",
