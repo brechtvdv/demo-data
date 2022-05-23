@@ -15,7 +15,7 @@
   <http://schema.org/name> "Station Eeklo";
   <http://www.w3.org/2003/01/geo/wgs84_pos#latitude> "51.180972000000"^^<http://www.w3.org/2001/XMLSchema#float>;
   <http://www.w3.org/2003/01/geo/wgs84_pos#longitude> "3.574750000000"^^<http://www.w3.org/2001/XMLSchema#float>;
-  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(51.180972000000 3.574750000000)"
+  <http://www.opengis.net/ont/geosparql#asWKT> "POINT(51.180972000000 3.574750000000)";
   <https://w3id.org/gbfs#bikes_available> 4;
   <https://w3id.org/gbfs#docks_in_use> 8 .
 
