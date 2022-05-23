@@ -1,0 +1,32 @@
+
+<https://blue-bike.be/stations/103#2022-03-15T09:11:56> a <https://w3id.org/gbfs#Station>;
+  <http://purl.org/dc/terms/created> "2022-03-15T09:11:56";
+  <http://purl.org/dc/terms/isVersionOf> <https://blue-bike.be/stations/103>;
+  <http://schema.org/name> "Station Geel";
+  <http://www.w3.org/2003/01/geo/wgs84_pos#latitude> "51.168778000000"^^<http://www.w3.org/2001/XMLSchema#float>;
+  <http://www.w3.org/2003/01/geo/wgs84_pos#longitude> "4.988778000000"^^<http://www.w3.org/2001/XMLSchema#float>;
+  <>
+  <https://w3id.org/gbfs#bikes_available> 12;
+  <https://w3id.org/gbfs#docks_in_use> 3 .
+
+<https://blue-bike.be/stations/104#2022-03-15T09:10:46> a <https://w3id.org/gbfs#Station>;
+  <http://purl.org/dc/terms/created> "2022-03-15T09:10:46";
+  <http://purl.org/dc/terms/isVersionOf> <https://blue-bike.be/stations/104>;
+  <http://schema.org/name> "Station Eeklo";
+  <http://www.w3.org/2003/01/geo/wgs84_pos#latitude> "51.180972000000"^^<http://www.w3.org/2001/XMLSchema#float>;
+  <http://www.w3.org/2003/01/geo/wgs84_pos#longitude> "3.574750000000"^^<http://www.w3.org/2001/XMLSchema#float>;
+  <https://w3id.org/gbfs#bikes_available> 4;
+  <https://w3id.org/gbfs#docks_in_use> 8 .
+
+<https://pieter.pm/RML-LDES-prototype/bluebike.ttl> <https://w3id.org/ldes#retentionPolicy>
+    <https://pieter.pm/RML-LDES-prototype/bluebike.ttl#retention> .
+
+<https://pieter.pm/RML-LDES-prototype/bluebike.ttl#eventstream> a <https://w3id.org/ldes#EventStream>;
+  <https://w3id.org/tree#member> <https://blue-bike.be/stations/103#2022-03-15T09:11:56>,
+    <https://blue-bike.be/stations/104#2022-03-15T09:10:46>;
+  <https://w3id.org/tree#view> <https://pieter.pm/RML-LDES-prototype/bluebike.ttl> .
+
+<https://pieter.pm/RML-LDES-prototype/bluebike.ttl#retention> a <https://w3id.org/ldes#LatestVersionSubset>;
+  <https://w3id.org/ldes#amount> 1;
+  <https://w3id.org/ldes#timestampPath> <http://purl.org/dc/terms/created>;
+  <https://w3id.org/ldes#versionOfPath> <http://purl.org/dc/terms/isVersionOf> .
