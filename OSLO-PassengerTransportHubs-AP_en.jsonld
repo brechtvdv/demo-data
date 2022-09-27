@@ -745,7 +745,7 @@
     },
     "TransportHub.location": {
       "@container": "@set",
-      "@id": " http://purl.org/dc/terms/spatial",
+      "@id": "http://purl.org/dc/terms/spatial",
       "@type": "@id"
     },
     "TransportHub.roadAuthority": {
