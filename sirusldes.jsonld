@@ -1,7 +1,9 @@
 {
 	"@context": [{
-			"sirus": "https://sirus.be/id/",
-			"sirusLdes": "https://sirus.be/ns/ldes#"
+			"sirus": "https://sirus.be/ns",
+			"sirusLdes": "https://sirus.be/ns/ldes#",
+	  		"Replication": "sirusLdes:Replication",
+	  		"LDESClient.url": "sirusLdes.LDESClient.url"
 		},
 		"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld"
 	]
