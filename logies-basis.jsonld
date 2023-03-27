@@ -2,9 +2,9 @@
 	"@context": {
 		"Adres": "https://data.vlaanderen.be/ns/adres#Adres",
 		"Agent": "http://purl.org/dc/terms/Agent",
-		"Beoordeling": "http://schema.org/Rating",
+		"Beoordeling": "https://schema.org/Rating",
 		"Beschrijving": "https://data.vlaanderen.be/ns/logies#Beschrijving",
-		"CreatiefWerk": "http://schema.org/CreativeWork",
+		"CreatiefWerk": "https://schema.org/CreativeWork",
 		"Faciliteit": "https://data.vlaanderen.be/ns/logies#Faciliteit",
 		"GeregistreerdeOrganisatie": "http://www.w3.org/ns/regorg#RegisteredOrganization",
 		"Kwaliteitslabel": "https://data.vlaanderen.be/ns/logies#Kwaliteitslabel",
@@ -35,7 +35,7 @@
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"aantalKamers": {
-			"@id": "http://schema.org/numberOfRooms",
+			"@id": "https://schema.org/numberOfRooms",
 			"@type": "http://www.w3.org/2001/XMLSchema#integer"
 		},
 		"aantalSlaapplaatsen": {
@@ -63,7 +63,7 @@
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"alternatieveNaam": {
-			"@id": "http://schema.org/alternativeName",
+			"@id": "https://schema.org/alternativeName",
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"behoortTotToeristischeRegio": {
@@ -72,23 +72,23 @@
 			"@container": "@set"
 		},
 		"beoordeling": {
-			"@id": "http://schema.org/ratingValue",
+			"@id": "https://schema.org/ratingValue",
 			"@type": "http://www.w3.org/2001/XMLSchema#string"
 		},
 		"beschikbaarTot": {
-			"@id": "http://schema.org/validThrough",
+			"@id": "https://schema.org/validThrough",
 			"@type": "http://www.w3.org/2001/XMLSchema#dateTime"
 		},
 		"beschikbaarVan": {
-			"@id": "http://schema.org/validFrom",
+			"@id": "https://schema.org/validFrom",
 			"@type": "http://www.w3.org/2001/XMLSchema#dateTime"
 		},
 		"beschikbaarheid": {
-			"@id": "http://schema.org/hoursAvailable",
+			"@id": "https://schema.org/hoursAvailable",
 			"@type": "@id"
 		},
 		"beschrijving": {
-			"@id": "http://schema.org/description",
+			"@id": "https://schema.org/description",
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"bevatPlaats": {
@@ -97,11 +97,11 @@
 			"@container": "@set"
 		},
 		"bewerkt": {
-			"@id": "http://schema.org/dateModified",
+			"@id": "https://schema.org/dateModified",
 			"@type": "http://www.w3.org/2001/XMLSchema#dateTime"
 		},
 		"breedte": {
-			"@id": "http://schema.org/width",
+			"@id": "https://schema.org/width",
 			"@type": "@id"
 		},
 		"busnummer": {
@@ -114,11 +114,11 @@
 			"@container": "@set"
 		},
 		"caption": {
-			"@id": "http://schema.org/caption",
+			"@id": "https://schema.org/caption",
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"contactPunt": {
-			"@id": "http://schema.org/contactPoint",
+			"@id": "https://schema.org/contactPoint",
 			"@type": "@id",
 			"@container": "@set"
 		},
@@ -127,7 +127,7 @@
 			"@type": "http://www.w3.org/2001/XMLSchema#string"
 		},
 		"contentUrl": {
-			"@id": "http://schema.org/contentUrl",
+			"@id": "https://schema.org/contentUrl",
 			"@type": "@id"
 		},
 		"creatie": {
@@ -135,24 +135,24 @@
 			"@type": "@id"
 		},
 		"doelpubliek": {
-			"@id": "http://schema.org/audience",
+			"@id": "https://schema.org/audience",
 			"@type": "@id",
 			"@container": "@set"
 		},
 		"eenheid": {
-			"@id": "http://schema.org/unitText",
+			"@id": "https://schema.org/unitText",
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"email": {
-			"@id": "http://schema.org/email",
+			"@id": "https://schema.org/email",
 			"@type": "http://www.w3.org/2001/XMLSchema#string"
 		},
 		"exifData": {
-			"@id": "http://schema.org/exifData",
+			"@id": "https://schema.org/exifData",
 			"@type": "http://www.w3.org/2001/XMLSchema#string"
 		},
 		"fax": {
-			"@id": "http://schema.org/faxNumber",
+			"@id": "https://schema.org/faxNumber",
 			"@type": "http://www.w3.org/2001/XMLSchema#string"
 		},
 		"formaat": {
@@ -164,7 +164,7 @@
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"genormeerdeEenheid": {
-			"@id": "http://schema.org/unitCode",
+			"@id": "https://schema.org/unitCode",
 			"@type": "@id"
 		},
 		"geometrie": {
@@ -181,7 +181,7 @@
 			"@container": "@set"
 		},
 		"heeftAuteur": {
-			"@id": "http://schema.org/author",
+			"@id": "https://schema.org/author",
 			"@type": "@id",
 			"@container": "@set"
 		},
@@ -191,7 +191,7 @@
 			"@container": "@set"
 		},
 		"heeftFaciliteit": {
-			"@id": "http://schema.org/amenityFeature",
+			"@id": "https://schema.org/amenityFeature",
 			"@type": "@id",
 			"@container": "@set"
 		},
@@ -211,7 +211,7 @@
 			"@container": "@set"
 		},
 		"heeftOfficieleBeoordeling": {
-			"@id": "http://schema.org/starRating",
+			"@id": "https://schema.org/starRating",
 			"@type": "@id",
 			"@container": "@set"
 		},
@@ -226,11 +226,11 @@
 			"@container": "@set"
 		},
 		"hoogsteBeoordeling": {
-			"@id": "http://schema.org/bestRating",
+			"@id": "https://schema.org/bestRating",
 			"@type": "http://www.w3.org/2001/XMLSchema#string"
 		},
 		"hoogte": {
-			"@id": "http://schema.org/height",
+			"@id": "https://schema.org/height",
 			"@type": "@id"
 		},
 		"huisnummer": {
@@ -242,7 +242,7 @@
 			"@type": "@id"
 		},
 		"isGebaseerdOp": {
-			"@id": "http://schema.org/exampleOfWork",
+			"@id": "https://schema.org/exampleOfWork",
 			"@type": "@id"
 		},
 		"isSpecialisatieVan": {
@@ -254,11 +254,11 @@
 			"@type": "@id"
 		},
 		"isVertalingVan": {
-			"@id": "http://schema.org/translationOfWork",
+			"@id": "https://schema.org/translationOfWork",
 			"@type": "@id"
 		},
 		"laagsteBeoordeling": {
-			"@id": "http://schema.org/worstRating",
+			"@id": "https://schema.org/worstRating",
 			"@type": "http://www.w3.org/2001/XMLSchema#string"
 		},
 		"label": {
@@ -270,7 +270,7 @@
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"licentie": {
-			"@id": "http://schema.org/license",
+			"@id": "https://schema.org/license",
 			"@type": "@id"
 		},
 		"locatie": {
@@ -285,7 +285,7 @@
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"naam": {
-			"@id": "http://schema.org/name",
+			"@id": "https://schema.org/name",
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"onthaalAdres": {
@@ -298,7 +298,7 @@
 			"@type": "@id"
 		},
 		"openingsuren": {
-			"@id": "http://schema.org/openingHours",
+			"@id": "https://schema.org/openingHours",
 			"@type": "@id"
 		},
 		"opheffing": {
@@ -318,7 +318,7 @@
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"publicatieDatum": {
-			"@id": "http://schema.org/datePublished",
+			"@id": "https://schema.org/datePublished",
 			"@type": "http://www.w3.org/2001/XMLSchema#dateTime"
 		},
 		"rechtspersoonlijkheid": {
@@ -346,20 +346,20 @@
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"taal": {
-			"@id": "http://schema.org/inLanguage",
+			"@id": "https://schema.org/inLanguage",
 			"@type": "@id",
 			"@container": "@set"
 		},
 		"tekst": {
-			"@id": "http://schema.org/value",
+			"@id": "https://schema.org/value",
 			"@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
 		},
 		"telefoon": {
-			"@id": "http://schema.org/telephone",
+			"@id": "https://schema.org/telephone",
 			"@type": "http://www.w3.org/2001/XMLSchema#string"
 		},
 		"thumbnailUrl": {
-			"@id": "http://schema.org/thumbnailUrl",
+			"@id": "https://schema.org/thumbnailUrl",
 			"@type": "@id"
 		},
 		"toegekendDoor": {
