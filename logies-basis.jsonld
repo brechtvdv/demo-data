@@ -1,6 +1,7 @@
 {
 	"@context": {
 		"Adres": "https://data.vlaanderen.be/ns/adres#Adres",
+		"Adresvoorstelling": "http://www.w3.org/ns/locn#Address",
 		"Agent": "http://purl.org/dc/terms/Agent",
 		"Beoordeling": "https://schema.org/Rating",
 		"Beschrijving": "https://data.vlaanderen.be/ns/logies#Beschrijving",
