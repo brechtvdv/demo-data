@@ -1,11 +1,11 @@
 @prefix sh:      <http://www.w3.org/ns/shacl#> .
 @prefix qb:      <http://purl.org/linked-data/cube#> .
-@prefix lblodBesluit:	<http://lblod.data.gift/vocabularies/besluit/>
+@prefix lblodBesluit:	<http://lblod.data.gift/vocabularies/besluit/> .
 <https://data.vlaanderen.be/shacl/besluit-publicatie#Rechtsgrond(Besluit)Shape>
 	a sh:NodeShape ;
 	sh:targetClass <http://data.europa.eu/eli/ontology#LegalResource> ;
 	lblodBesluit:maturiteitsniveau "Bonusniveau" ;
-	sh:name "Rechtsgrond (Besluit) ;
+	sh:name "Rechtsgrond (Besluit)" ;
 	sh:property [
 		sh:name "Rechtsgrond (Besluit) - heeftDeel" ;
 		sh:description "Duidt een artikel aan van dit besluit." ;
@@ -41,7 +41,7 @@
 	a sh:NodeShape ;
 	sh:targetClass <http://data.europa.eu/eli/ontology#LegalExpression> ;
 	lblodBesluit:maturiteitsniveau "Niveau 1" ;
-	sh:name "Besluit"
+	sh:name "Besluit" ;
 	sh:property [
 		sh:name "LegaleVerschijningsvorm - veranderdDoor" ;
 		sh:description "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen heeft ondergaan door een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering." ;
@@ -338,7 +338,7 @@
 
 <https://data.vlaanderen.be/shacl/besluit-publicatie#BestuursorgaanShape>
 	a sh:NodeShape ;
-	sh:name "Bestuursorgaan"
+	sh:name "Bestuursorgaan" ;
 	lblodBesluit:maturiteitsniveau "Bonusniveau" ;
 	sh:targetClass <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan> ;
 	sh:property [
