@@ -27,7 +27,7 @@
 <https://data.vlaanderen.be/shacl/besluit-publicatie#Rechtsgrondonderdeel(Artikel)Shape>
 	a sh:NodeShape ;
 	sh:targetClass <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> ;
-	sh:name "Rechtsgrondonderdeel (Artikel)"
+	sh:name "Rechtsgrondonderdeel (Artikel)" ;
 	sh:property [
 		sh:name "Rechtsgrondonderdeel (Artikel) - isDeelVan" ;
 		sh:description "Het besluit waar dit artikel onderdeel van is." ;
