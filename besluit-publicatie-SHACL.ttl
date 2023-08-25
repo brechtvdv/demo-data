@@ -711,4 +711,31 @@
 		sh:datatype <http://www.w3.org/2001/XMLSchema#date> ;
 		sh:maxCount 1 ;
 	] ;
+	sh:property [
+		sh:name "inhoud" ;
+		lblodBesluit:maturiteitsniveau "Bonusniveau" ;
+		sh:description "De beschrijving van de beoogde rechtsgevolgen, het zogenaamde beschikkend gedeelte." ;
+		sh:path <http://www.w3.org/ns/prov#value> ;
+		sh:datatype <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:property [
+		sh:name "taal" ;
+		lblodBesluit:maturiteitsniveau "Bonusniveau" ;
+		sh:description "De taal van de verschijningsvorm." ;
+		sh:path <http://data.europa.eu/eli/ontology#language> ;
+		sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		qb:codeList <http://publications.europa.eu/mdr/authority/language/index.html> ;
+	] ;
+	sh:property [
+		sh:name "titel" ;
+		lblodBesluit:maturiteitsniveau "Bonusniveau" ;
+		sh:description "Titel van de legale verschijningsvorm." ;
+		sh:path <http://data.europa.eu/eli/ontology#title> ;
+		sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+		sh:minCount 1 ;
+	] ;
 	sh:closed false .
