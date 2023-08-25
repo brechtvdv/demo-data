@@ -655,6 +655,36 @@
 		sh:maxCount 1 ;
 	] ;
 	sh:property [
+		sh:name "veranderdDoor" ;
+		sh:description "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen heeft ondergaan door een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering." ;
+		sh:path <http://data.europa.eu/eli/ontology#changed_by> ;
+		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
+	] ;
+	sh:property [
+		sh:name "citeert" ;
+		sh:description "Een citatie in de wettelijke tekst. Dit omvat zowel woordelijke citaten als citaten in verwijzingen." ;
+		sh:path <http://data.europa.eu/eli/ontology#cites> ;
+		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
+	] ;
+	sh:property [
+		sh:name "gecorrigeerdDoor" ;
+		sh:description "Duidt een legale verschijningsvorm aan die een tekstuele verandering zonder legale impact aan deze legale verschijningsvorm aanbrengt." ;
+		sh:path <http://data.europa.eu/eli/ontology#corrected_by> ;
+		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
+	] ;
+	sh:property [
+		sh:name "verandert" ;
+		sh:description "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen doorvoert op een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering." ;
+		sh:path <http://data.europa.eu/eli/ontology#changes> ;
+		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
+	] ;
+	sh:property [
+		sh:name "corrigeert" ;
+		sh:description "Duidt aan dat deze legale verschijningsvorm tekstuele veranderingen zonder legale impact aanbrengt in een andere legale verschijningsvorm." ;
+		sh:path <http://data.europa.eu/eli/ontology#corrects> ;
+		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
+	] ;
+	sh:property [
 		sh:name "inhoud" ;
 		lblodBesluit:maturiteitsniveau "Bonusniveau" ;
 		sh:description "De beschrijving van de beoogde rechtsgevolgen, het zogenaamde beschikkend gedeelte." ;
@@ -737,6 +767,36 @@
 		sh:path <http://data.europa.eu/eli/ontology#date_publication> ;
 		sh:datatype <http://www.w3.org/2001/XMLSchema#date> ;
 		sh:maxCount 1 ;
+	] ;
+	sh:property [
+		sh:name "veranderdDoor" ;
+		sh:description "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen heeft ondergaan door een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering." ;
+		sh:path <http://data.europa.eu/eli/ontology#changed_by> ;
+		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
+	] ;
+	sh:property [
+		sh:name "citeert" ;
+		sh:description "Een citatie in de wettelijke tekst. Dit omvat zowel woordelijke citaten als citaten in verwijzingen." ;
+		sh:path <http://data.europa.eu/eli/ontology#cites> ;
+		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
+	] ;
+	sh:property [
+		sh:name "gecorrigeerdDoor" ;
+		sh:description "Duidt een legale verschijningsvorm aan die een tekstuele verandering zonder legale impact aan deze legale verschijningsvorm aanbrengt." ;
+		sh:path <http://data.europa.eu/eli/ontology#corrected_by> ;
+		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
+	] ;
+	sh:property [
+		sh:name "verandert" ;
+		sh:description "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen doorvoert op een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering." ;
+		sh:path <http://data.europa.eu/eli/ontology#changes> ;
+		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
+	] ;
+	sh:property [
+		sh:name "corrigeert" ;
+		sh:description "Duidt aan dat deze legale verschijningsvorm tekstuele veranderingen zonder legale impact aanbrengt in een andere legale verschijningsvorm." ;
+		sh:path <http://data.europa.eu/eli/ontology#corrects> ;
+		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
 	] ;
 	sh:property [
 		sh:name "inhoud" ;
