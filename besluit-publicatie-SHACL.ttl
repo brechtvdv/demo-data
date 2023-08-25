@@ -351,6 +351,14 @@
 		sh:maxCount 1 ;
 	] ;
 	sh:property [
+		sh:name "isTijdspecialisatieVan" ;
+		sh:description "FOUT, zie hierboven, Duidt de bronentiteit aan waarvan deze entiteit een tijdsgebonden specialisatie is. De specialisatie stelt de bron voor gedurende een bepaalde periode." ;
+		sh:path <https://data.vlaanderen.be/ns/mandaat#isTijdspecialisatieVan> ;
+		sh:class <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:property [
 		sh:name "bestuurt" ;
 		sh:description "De bestuurseenheid die door het orgaan bestuurd wordt." ;
 		sh:path <http://data.vlaanderen.be/ns/besluit#bestuurt> ;
