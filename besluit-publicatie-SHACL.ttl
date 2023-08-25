@@ -42,7 +42,7 @@
 	a sh:NodeShape ;
 	sh:targetClass <http://data.europa.eu/eli/ontology#LegalExpression> ;
 	lblodBesluit:maturiteitsniveau "Niveau 1" ;
-	sh:name "Besluit" ;
+	sh:name "LegaleVerschijningsvorm" ;
 	sh:property [
 		sh:name "veranderdDoor" ;
 		sh:description "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen heeft ondergaan door een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering." ;
