@@ -1,0 +1,340 @@
+<https://example.org/Event_170ycem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#EndEvent>.
+<https://example.org/Event_170ycem> <http://www.w3.org/2000/01/rdf-schema#label> "end event"@en.
+<https://example.org/Event_170ycem> <http://www.w3.org/2000/01/rdf-schema#comment> "The End Event indicates where a Process will end. In terms of Sequence Flows, the End Event ends the flow of the Process, and thus, will not have any outgoing Sequence Flows—no Sequence Flow can connect from an End Event."@en.
+<https://example.org/Event_170ycem> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Gateway_0vwk99m> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#ParallelGateway>.
+<https://example.org/Gateway_0vwk99m> <http://www.w3.org/2000/01/rdf-schema#label> "parallel gateway"@en.
+<https://example.org/Gateway_0vwk99m> <http://www.w3.org/2000/01/rdf-schema#comment> "A Parallel Gateway is used to synchronize (combine) parallel flows and to create parallel flows. A Parallel Gateway creates parallel paths without checking any conditions; each outgoing Sequence Flow receives a token upon execution of this Gateway. For incoming flows, the Parallel Gateway will wait for all incoming flows before triggering the flow through its outgoing Sequence Flows."@en.
+<https://example.org/Gateway_0vwk99m> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Gateway_0vwk99m> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_0x542fd>.
+<https://example.org/Gateway_0vwk99m> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_1gon1wv>.
+<https://example.org/Gateway_0vwk99m> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_0qmphzo>.
+<https://example.org/Gateway_0qvy1nz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#ParallelGateway>.
+<https://example.org/Gateway_0qvy1nz> <http://www.w3.org/2000/01/rdf-schema#label> "parallel gateway"@en.
+<https://example.org/Gateway_0qvy1nz> <http://www.w3.org/2000/01/rdf-schema#comment> "A Parallel Gateway is used to synchronize (combine) parallel flows and to create parallel flows. A Parallel Gateway creates parallel paths without checking any conditions; each outgoing Sequence Flow receives a token upon execution of this Gateway. For incoming flows, the Parallel Gateway will wait for all incoming flows before triggering the flow through its outgoing Sequence Flows."@en.
+<https://example.org/Gateway_0qvy1nz> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Gateway_0qvy1nz> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_11x668z>.
+<https://example.org/Gateway_0qvy1nz> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_1gy8jts>.
+<https://example.org/Gateway_0qvy1nz> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_0rmtbqk>.
+<https://example.org/Gateway_0qvy1nz> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_0yuckjy>.
+<https://example.org/Gateway_0qvy1nz> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_0x542fd>.
+<https://example.org/Gateway_0qvy1nz> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_1giakye>.
+<https://example.org/Gateway_1mqsmvq> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#ParallelGateway>.
+<https://example.org/Gateway_1mqsmvq> <http://www.w3.org/2000/01/rdf-schema#label> "parallel gateway"@en.
+<https://example.org/Gateway_1mqsmvq> <http://www.w3.org/2000/01/rdf-schema#comment> "A Parallel Gateway is used to synchronize (combine) parallel flows and to create parallel flows. A Parallel Gateway creates parallel paths without checking any conditions; each outgoing Sequence Flow receives a token upon execution of this Gateway. For incoming flows, the Parallel Gateway will wait for all incoming flows before triggering the flow through its outgoing Sequence Flows."@en.
+<https://example.org/Gateway_1mqsmvq> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Gateway_1mqsmvq> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_08a26a7>.
+<https://example.org/Gateway_1mqsmvq> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_0jxwzm2>.
+<https://example.org/Gateway_1mqsmvq> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_1v8tlto>.
+<https://example.org/Gateway_1mqsmvq> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_1qmqlxx>.
+<https://example.org/Gateway_1mqsmvq> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_1qg5j0a>.
+<https://example.org/Gateway_1dmblst> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#ParallelGateway>.
+<https://example.org/Gateway_1dmblst> <http://www.w3.org/2000/01/rdf-schema#label> "parallel gateway"@en.
+<https://example.org/Gateway_1dmblst> <http://www.w3.org/2000/01/rdf-schema#comment> "A Parallel Gateway is used to synchronize (combine) parallel flows and to create parallel flows. A Parallel Gateway creates parallel paths without checking any conditions; each outgoing Sequence Flow receives a token upon execution of this Gateway. For incoming flows, the Parallel Gateway will wait for all incoming flows before triggering the flow through its outgoing Sequence Flows."@en.
+<https://example.org/Gateway_1dmblst> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Gateway_1dmblst> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_0hhx96i>.
+<https://example.org/Gateway_1dmblst> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_05kduqy>.
+<https://example.org/Gateway_1dmblst> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_1tvzv0l>.
+<https://example.org/Gateway_1dmblst> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_1lucgk9>.
+<https://example.org/Gateway_1dmblst> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_1ga5hbz>.
+<https://example.org/Gateway_1dmblst> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_0kmne53>.
+<https://example.org/Gateway_1qk70si> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#ParallelGateway>.
+<https://example.org/Gateway_1qk70si> <http://www.w3.org/2000/01/rdf-schema#label> "parallel gateway"@en.
+<https://example.org/Gateway_1qk70si> <http://www.w3.org/2000/01/rdf-schema#comment> "A Parallel Gateway is used to synchronize (combine) parallel flows and to create parallel flows. A Parallel Gateway creates parallel paths without checking any conditions; each outgoing Sequence Flow receives a token upon execution of this Gateway. For incoming flows, the Parallel Gateway will wait for all incoming flows before triggering the flow through its outgoing Sequence Flows."@en.
+<https://example.org/Gateway_1qk70si> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Gateway_1qk70si> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_0nqi29t>.
+<https://example.org/Gateway_1qk70si> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_1g8x9xj>.
+<https://example.org/Gateway_1qk70si> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_0ym88qp>.
+<https://example.org/Gateway_1qk70si> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_0a87tnu>.
+<https://example.org/Gateway_1qk70si> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_1mr83yw>.
+<https://example.org/Flow_18fvpp1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_18fvpp1> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/StartEvent_1>.
+<https://example.org/Flow_18fvpp1> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_0enyxmj>.
+<https://example.org/Flow_18fvpp1> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_18fvpp1> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0qmphzo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0qmphzo> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_0enyxmj>.
+<https://example.org/Flow_0qmphzo> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_0vwk99m>.
+<https://example.org/Flow_0qmphzo> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0qmphzo> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0x542fd> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0x542fd> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_0vwk99m>.
+<https://example.org/Flow_0x542fd> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_0qvy1nz>.
+<https://example.org/Flow_0x542fd> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0x542fd> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_11x668z> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_11x668z> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_0qvy1nz>.
+<https://example.org/Flow_11x668z> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_0vfb8fv>.
+<https://example.org/Flow_11x668z> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_11x668z> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1gy8jts> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1gy8jts> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_0qvy1nz>.
+<https://example.org/Flow_1gy8jts> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_0pwp8gk>.
+<https://example.org/Flow_1gy8jts> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1gy8jts> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0rmtbqk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0rmtbqk> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_0qvy1nz>.
+<https://example.org/Flow_0rmtbqk> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_0f8bj7g>.
+<https://example.org/Flow_0rmtbqk> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0rmtbqk> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0yuckjy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0yuckjy> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_0qvy1nz>.
+<https://example.org/Flow_0yuckjy> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_1nmfzro>.
+<https://example.org/Flow_0yuckjy> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0yuckjy> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0jxwzm2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0jxwzm2> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_0vfb8fv>.
+<https://example.org/Flow_0jxwzm2> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1mqsmvq>.
+<https://example.org/Flow_0jxwzm2> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0jxwzm2> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1v8tlto> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1v8tlto> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_0pwp8gk>.
+<https://example.org/Flow_1v8tlto> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1mqsmvq>.
+<https://example.org/Flow_1v8tlto> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1v8tlto> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1qmqlxx> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1qmqlxx> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_0f8bj7g>.
+<https://example.org/Flow_1qmqlxx> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1mqsmvq>.
+<https://example.org/Flow_1qmqlxx> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1qmqlxx> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1qg5j0a> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1qg5j0a> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_1nmfzro>.
+<https://example.org/Flow_1qg5j0a> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1mqsmvq>.
+<https://example.org/Flow_1qg5j0a> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1qg5j0a> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_08a26a7> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_08a26a7> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_1mqsmvq>.
+<https://example.org/Flow_08a26a7> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1mbtbsk>.
+<https://example.org/Flow_08a26a7> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_08a26a7> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1ga5hbz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1ga5hbz> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_1mbtbsk>.
+<https://example.org/Flow_1ga5hbz> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1dmblst>.
+<https://example.org/Flow_1ga5hbz> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1ga5hbz> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1ga5hbz> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Ja".
+<https://example.org/Flow_1gon1wv> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1gon1wv> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_0vwk99m>.
+<https://example.org/Flow_1gon1wv> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_0sojqvs>.
+<https://example.org/Flow_1gon1wv> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1gon1wv> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0y21tch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0y21tch> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_0sojqvs>.
+<https://example.org/Flow_0y21tch> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Event_170ycem>.
+<https://example.org/Flow_0y21tch> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0y21tch> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1mo7gbc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1mo7gbc> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_1mbtbsk>.
+<https://example.org/Flow_1mo7gbc> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Event_170ycem>.
+<https://example.org/Flow_1mo7gbc> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1mo7gbc> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1mo7gbc> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Nee, geweigerd".
+<https://example.org/Flow_1giakye> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1giakye> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_1mbtbsk>.
+<https://example.org/Flow_1giakye> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_0qvy1nz>.
+<https://example.org/Flow_1giakye> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1giakye> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1giakye> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Nee".
+<https://example.org/Flow_0hhx96i> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0hhx96i> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_1dmblst>.
+<https://example.org/Flow_0hhx96i> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_1y08aqz>.
+<https://example.org/Flow_0hhx96i> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0hhx96i> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_05kduqy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_05kduqy> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_1dmblst>.
+<https://example.org/Flow_05kduqy> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_1iezwpn>.
+<https://example.org/Flow_05kduqy> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_05kduqy> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1tvzv0l> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1tvzv0l> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_1dmblst>.
+<https://example.org/Flow_1tvzv0l> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_0vpfjge>.
+<https://example.org/Flow_1tvzv0l> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1tvzv0l> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1lucgk9> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1lucgk9> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_1dmblst>.
+<https://example.org/Flow_1lucgk9> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_0te0ek5>.
+<https://example.org/Flow_1lucgk9> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1lucgk9> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1g8x9xj> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1g8x9xj> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_1y08aqz>.
+<https://example.org/Flow_1g8x9xj> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1qk70si>.
+<https://example.org/Flow_1g8x9xj> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1g8x9xj> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0ym88qp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0ym88qp> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_1iezwpn>.
+<https://example.org/Flow_0ym88qp> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1qk70si>.
+<https://example.org/Flow_0ym88qp> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0ym88qp> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0a87tnu> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0a87tnu> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_0vpfjge>.
+<https://example.org/Flow_0a87tnu> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1qk70si>.
+<https://example.org/Flow_0a87tnu> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0a87tnu> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1mr83yw> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1mr83yw> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_0te0ek5>.
+<https://example.org/Flow_1mr83yw> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1qk70si>.
+<https://example.org/Flow_1mr83yw> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1mr83yw> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0nqi29t> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0nqi29t> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_1qk70si>.
+<https://example.org/Flow_0nqi29t> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1ijbxdx>.
+<https://example.org/Flow_0nqi29t> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0nqi29t> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0kmne53> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0kmne53> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_1ijbxdx>.
+<https://example.org/Flow_0kmne53> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_1dmblst>.
+<https://example.org/Flow_0kmne53> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0kmne53> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0kmne53> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Nee".
+<https://example.org/Flow_0v9xcmw> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0v9xcmw> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_1ijbxdx>.
+<https://example.org/Flow_0v9xcmw> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_1x2uyvo>.
+<https://example.org/Flow_0v9xcmw> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0v9xcmw> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0v9xcmw> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Ja".
+<https://example.org/Flow_0vzubab> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0vzubab> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_1x2uyvo>.
+<https://example.org/Flow_0vzubab> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_0kjuo5a>.
+<https://example.org/Flow_0vzubab> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0vzubab> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0gqq3g8> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0gqq3g8> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_0kjuo5a>.
+<https://example.org/Flow_0gqq3g8> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_0rldpu7>.
+<https://example.org/Flow_0gqq3g8> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0gqq3g8> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0gqq3g8> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Ja".
+<https://example.org/Flow_0ow193e> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0ow193e> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_0kjuo5a>.
+<https://example.org/Flow_0ow193e> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Event_170ycem>.
+<https://example.org/Flow_0ow193e> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0ow193e> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0ow193e> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Nee".
+<https://example.org/Flow_0oqb9di> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0oqb9di> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_0rldpu7>.
+<https://example.org/Flow_0oqb9di> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Gateway_173kcvh>.
+<https://example.org/Flow_0oqb9di> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0oqb9di> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0foj00t> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0foj00t> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_173kcvh>.
+<https://example.org/Flow_0foj00t> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_0rldpu7>.
+<https://example.org/Flow_0foj00t> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0foj00t> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_0foj00t> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Ja".
+<https://example.org/Flow_1r0jgzy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_1r0jgzy> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Gateway_173kcvh>.
+<https://example.org/Flow_1r0jgzy> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Activity_01ii168>.
+<https://example.org/Flow_1r0jgzy> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_1r0jgzy> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Flow_1r0jgzy> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Nee".
+<https://example.org/Flow_0z0r7ou> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#sequenceFlow>.
+<https://example.org/Flow_0z0r7ou> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Activity_01ii168>.
+<https://example.org/Flow_0z0r7ou> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Event_170ycem>.
+<https://example.org/Flow_0z0r7ou> <http://www.w3.org/2000/01/rdf-schema#comment> "A Sequence Flow is used to show the order of Flow Elements in a Process or a Choreography. Each Sequence Flow has only one source and only one target. The source and target MUST be from the set of the following Flow Elements: Events (Start, Intermediate, and End), Activities (Task and Sub-Process; for Processes), Choreography Activities (Choreography Task and Sub-Choreography; for Choreographies), and Gateways."@en.
+<https://example.org/Flow_0z0r7ou> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/StartEvent_1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#StartEvent>.
+<https://example.org/StartEvent_1> <http://www.w3.org/2000/01/rdf-schema#label> "start event"@en.
+<https://example.org/StartEvent_1> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_18fvpp1>.
+<https://example.org/StartEvent_1> <http://www.w3.org/2000/01/rdf-schema#comment> "The Start Event indicates where a particular Process will start. In terms of Sequence Flows, the Start Event starts the flow of the Process, and thus, will not have any incoming Sequence Flows—no Sequence Flow can connect to a Start Event."@en.
+<https://example.org/StartEvent_1> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_0enyxmj> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_0enyxmj> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_0enyxmj> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_0enyxmj> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Ontvangen".
+<https://example.org/Activity_0enyxmj> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_0vfb8fv> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_0vfb8fv> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_0vfb8fv> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_0vfb8fv> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Volledig verklaren".
+<https://example.org/Activity_0vfb8fv> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_0pwp8gk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_0pwp8gk> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_0pwp8gk> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_0pwp8gk> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Niet volledige verklaren".
+<https://example.org/Activity_0pwp8gk> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_0f8bj7g> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_0f8bj7g> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_0f8bj7g> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_0f8bj7g> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Bijkomende informatie".
+<https://example.org/Activity_0f8bj7g> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_1nmfzro> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_1nmfzro> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_1nmfzro> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_1nmfzro> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Weigeren".
+<https://example.org/Activity_1nmfzro> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_0sojqvs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_0sojqvs> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_0sojqvs> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_0sojqvs> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Annuleren".
+<https://example.org/Activity_0sojqvs> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_1y08aqz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_1y08aqz> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_1y08aqz> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_1y08aqz> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Beslissing voorbereiden".
+<https://example.org/Activity_1y08aqz> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_1iezwpn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_1iezwpn> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_1iezwpn> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_1iezwpn> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Berekenen".
+<https://example.org/Activity_1iezwpn> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_0vpfjge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_0vpfjge> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_0vpfjge> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_0vpfjge> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Advies".
+<https://example.org/Activity_0vpfjge> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_0te0ek5> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_0te0ek5> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_0te0ek5> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_0te0ek5> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Bijkomende informatie".
+<https://example.org/Activity_0te0ek5> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_1x2uyvo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_1x2uyvo> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_1x2uyvo> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_1x2uyvo> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Beslissen".
+<https://example.org/Activity_1x2uyvo> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_0rldpu7> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_0rldpu7> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_0rldpu7> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_0rldpu7> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Uitbetalen subsidie".
+<https://example.org/Activity_0rldpu7> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Activity_01ii168> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task>.
+<https://example.org/Activity_01ii168> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en.
+<https://example.org/Activity_01ii168> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is an atomic Activity within a Process flow. A Task is used when the work in the Process cannot be broken down to a finer level of detail. Generally, an end-user and/or applications are used to perform the Task when it is executed."@en.
+<https://example.org/Activity_01ii168> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Afhandelen".
+<https://example.org/Activity_01ii168> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Gateway_1mbtbsk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#ExclusiveGateway>.
+<https://example.org/Gateway_1mbtbsk> <http://www.w3.org/2000/01/rdf-schema#label> "exclusive or gateway"@en.
+<https://example.org/Gateway_1mbtbsk> <http://www.w3.org/2000/01/rdf-schema#comment> "A diverging Exclusive Gateway (Decision) is used to create alternative paths within a Process flow. This is basically the “diversion point in the road” for a Process. For a given instance of the Process, only one of the paths can be taken."@en.
+<https://example.org/Gateway_1mbtbsk> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Gateway_1mbtbsk> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Volledig?".
+<https://example.org/Gateway_1mbtbsk> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_1ga5hbz>.
+<https://example.org/Gateway_1mbtbsk> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_1mo7gbc>.
+<https://example.org/Gateway_1mbtbsk> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_1giakye>.
+<https://example.org/Gateway_1mbtbsk> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_08a26a7>.
+<https://example.org/Gateway_1ijbxdx> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#ExclusiveGateway>.
+<https://example.org/Gateway_1ijbxdx> <http://www.w3.org/2000/01/rdf-schema#label> "exclusive or gateway"@en.
+<https://example.org/Gateway_1ijbxdx> <http://www.w3.org/2000/01/rdf-schema#comment> "A diverging Exclusive Gateway (Decision) is used to create alternative paths within a Process flow. This is basically the “diversion point in the road” for a Process. For a given instance of the Process, only one of the paths can be taken."@en.
+<https://example.org/Gateway_1ijbxdx> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Gateway_1ijbxdx> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Klaar voor beslissen?".
+<https://example.org/Gateway_1ijbxdx> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_0kmne53>.
+<https://example.org/Gateway_1ijbxdx> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_0v9xcmw>.
+<https://example.org/Gateway_1ijbxdx> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_0nqi29t>.
+<https://example.org/Gateway_0kjuo5a> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#ExclusiveGateway>.
+<https://example.org/Gateway_0kjuo5a> <http://www.w3.org/2000/01/rdf-schema#label> "exclusive or gateway"@en.
+<https://example.org/Gateway_0kjuo5a> <http://www.w3.org/2000/01/rdf-schema#comment> "A diverging Exclusive Gateway (Decision) is used to create alternative paths within a Process flow. This is basically the “diversion point in the road” for a Process. For a given instance of the Process, only one of the paths can be taken."@en.
+<https://example.org/Gateway_0kjuo5a> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Gateway_0kjuo5a> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Goedgekeurd?".
+<https://example.org/Gateway_0kjuo5a> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_0gqq3g8>.
+<https://example.org/Gateway_0kjuo5a> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_0ow193e>.
+<https://example.org/Gateway_0kjuo5a> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_0vzubab>.
+<https://example.org/Gateway_173kcvh> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#ExclusiveGateway>.
+<https://example.org/Gateway_173kcvh> <http://www.w3.org/2000/01/rdf-schema#label> "exclusive or gateway"@en.
+<https://example.org/Gateway_173kcvh> <http://www.w3.org/2000/01/rdf-schema#comment> "A diverging Exclusive Gateway (Decision) is used to create alternative paths within a Process flow. This is basically the “diversion point in the road” for a Process. For a given instance of the Process, only one of the paths can be taken."@en.
+<https://example.org/Gateway_173kcvh> <https://www.teamingai-project.eu/belongsToProcess> <https://example.org/Process_0wyp61v>.
+<https://example.org/Gateway_173kcvh> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#name> "Meerdere betalingen?".
+<https://example.org/Gateway_173kcvh> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_0foj00t>.
+<https://example.org/Gateway_173kcvh> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_targetRef> <https://example.org/Flow_1r0jgzy>.
+<https://example.org/Gateway_173kcvh> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#has_sourceRef> <https://example.org/Flow_0oqb9di>.
+<https://example.org/Process_0wyp61v> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process>.
+<https://example.org/Process_0wyp61v> <http://www.w3.org/2000/01/rdf-schema#comment> "representation of a business process using business process model and notation business ontology".
+<https://example.org/Process_0wyp61v> <https://www.teamingai-project.eu/belongsToRAMILayer> <https://w3id.org/i40/rami#Business>.
+<https://example.org/Process_0wyp61v> <https://www.teamingai-project.eu/belongsToView> <https://www.teamingai-project.eu/BusinessProcessManagementView>.
