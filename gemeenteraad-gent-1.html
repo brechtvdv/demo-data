@@ -1,0 +1,2671 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    
+
+    <title>Raadpleegomgeving - Agenda</title>
+    
+
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="_ctx" />
+
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" />
+
+    <link rel="stylesheet" href="/lib/datatables/css/datatables.min.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="/lib/datetimepicker/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="/lib/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="/lib/select2/css/select2-bootstrap4.min.css" />
+    <link rel="stylesheet" href="/lib/select2/css/select2-readonly.css" />
+    <link rel="stylesheet" href="/lib/bootstrap-multiselect/css/bootstrap-multiselect.min.css" />
+    <link rel="stylesheet" href="/consult.css" />
+
+    <!-- GVSUP-1791 - remove when IE11 is not used anymore -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+    <script src="/lib/less/less.min.js"></script>
+    <script src="/lib/jquery/jquery-3.4.1.min.js"></script>
+    <script src="/lib/jquery-mustache/jquery.mustache.js"></script>
+    <script src="/lib/jquery-pagination/jquery-pagination.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/bootbox/bootbox.min.js"></script>
+    <script src="/lib/underscore/underscore.min.js"></script>
+    <script src="/lib/datatables/js/datatables.min.js"></script>
+    <script src="/lib/moment/moment-with-locales.min.js"></script>
+    <script src="/lib/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/lib/select2/js/select2.min.js"></script>
+    <script src="/lib/select2/i18n/select2.nl.js"></script>
+    <script src="/lib/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
+    <script src="//sdk.companywebcast.com/sdk/player/client.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XESFNK6WJK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XESFNK6WJK');
+    </script>
+
+    <!-- Matomo -->
+    
+    <!-- End Matomo Code -->
+
+    <script>
+        var _contextPath = '';
+        $(document).ready(function () {
+            var _ctxContent = $('meta[name=_ctx]').attr('content');
+            _contextPath = _ctxContent ? _ctxContent : '';
+        });
+    </script>
+
+    <script src="/js/consult.js"></script>
+<script src="/js/meeting.js"></script>
+</head>
+<body>
+    <nav>
+    <div class="container">
+        <div class="logo">
+            <a class="navi-logo" href="/"><img src="data:image/png;base64, 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" alt="Logo Raadpleegomgeving" /></a>
+        </div>
+        <div class="menu">
+            <span class="menu-item">
+                <a href="/"><i class="fal fa-home"></i><span class="d-none d-lg-inline-block">Startpagina</span></a>
+            </span>
+            <span class="menu-item">
+                <a href="/zittingen/kalender" class="calendar-link"><i class="fal fa-calendar-alt"></i><span class="d-none d-lg-inline-block">Kalender</span></a>
+            </span>
+            
+            <span class="menu-item">
+                <a href="https://channel.royalcast.com/stadgent" target="_blank"><i class="fal fa-video"></i><span class="d-none d-lg-inline-block">Webcast</span></a>
+            </span>
+            <span class="menu-item d-lg-none">
+                <a href="/zoeken"><i class="far fa-search"></i><span class="d-none d-lg-inline-block">Zoeken</span></a>
+            </span>
+            <div class="search menu-item d-none d-lg-inline-block">
+                <label for="search-field" class="sr-only">Zoeken</label>
+                <input type="text" autocomplete="off" id="search-field" />
+                <i class="far fa-search"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section>
+        <div class="page">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="return-header">
+                        <a href="https://ebesluitvorming.gent.be/zittingen/kalender"><span class="sr-only">Terug</span><i class="fal fa-arrow-circle-left"></i></a>
+                        <span>gemeenteraad</span>
+                    </h1>
+                    <p class="location-time">
+                        <span class="time">di 30/05/2023 - 19:00</span>
+                        <span class="location">gemeenteraadszaal</span>
+                        
+                    </p>
+                </div>
+            </div>
+
+            <div class="row webcast-row">
+                <div class="col-lg-12">
+                    <div class="webcast-nav">
+                        <div class="float-left">
+                            <a href="#" id="prev-webcast" class="btn" title="Vorige webcast"><i class="fa fa-arrow-circle-left"></i></a>
+                        </div>
+                        <div class="float-right">
+                            <a href="#" id="next-webcast" class="btn" title="Volgende webcast"><i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                        <div id="webcast-index" class="center"></div>
+                    </div>
+                    <div id="webcast" class="webcast"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a href="#" class="show-summaries float-right" data-state="hidden">Samenvatting weergeven</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="agenda">
+                        
+    
+    
+        <h2>Mededelingen (onder) voorzitter gemeenteraad en raad voor maatschappelijk welzijn</h2>
+        
+        
+        
+        
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0508.7255.2635">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0508.7255.2635" class="title">Opening zitting</a>
+            </div>
+            <div class="summary"><p>De voorzitter deelt mee dat de vergadering live wordt uitgezonden, niet alleen geluid maar ook beeld.</p><p>Het stemsysteem is gebaseerd op de badges. De badges registreren de aanwezigheid. Dus raadsleden moeten hun badge uithalen als ze de zaal (even) verlaten. Alleen als de badge inzit voor de stemming wordt geopend, kan een raadslid stemmen.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0526.3282.8442">
+            <div class="item not-published">
+                
+                
+                <a class="title">Beheer agenda</a>
+                
+            </div>
+            
+        </li>
+    </ul>
+    
+
+    
+    
+        <h2>Openbare vergadering</h2>
+        
+        
+        
+        
+        
+    
+    
+        
+        <h3>B-punten</h3>
+        
+        
+        
+        
+    
+    
+        
+        
+        <h4>Bevoegdheid Stad</h4>
+        
+        
+        
+    
+    
+        
+        
+        
+        <h5>Bedrijfsvoering</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Juridische Dienst</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0420.8739.0065">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">6</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0420.8739.0065" class="title">2023_GR_00452 - Designplatform Gent Oost-Vlaanderen VZW - Algemene vergadering van 12 juni 2023 - Dagorde - Kennisneming -  Mandaat van de vertegenwoordigers van Stad Gent , statutenwijziging en ontbinding  - Goedkeuring</a>
+            </div>
+            <div class="summary"><p><span>Aan de gemeenteraad wordt gevraagd kennis te nemen van de dagorde en elk van de afzonderlijke punten van de dagorde van de algemene vergadering van 12 juni 2023 van Designplatform Gent Oost-Vlaanderen VZW en het mandaat goed te keuren van de vertegenwoordigers van de Stad Gent die deelnemen aan deze algemene vergadering om:<br>- er aan alle beraadslagingen en stemmingen deel te nemen, alle voorstellen met betrekking tot de agenda goed te keuren waaronder de statutenwijziging en ontbinding, alle akten, stukken, notulen, aanwezigheidslijsten te ondertekenen en in het algemeen, het nodige te doen, en<br>- deel te nemen aan elke latere algemene vergadering met dezelfde dagorde in geval de eerste algemene vergadering niet rechtsgeldig zou kunnen beraadslagen.</span><span>&nbsp;</span></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="22.1207.2479.7328">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">8</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/22.1207.2479.7328" class="title">2023_GR_00498 - Politiereglement op de begraafplaatsen - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te geven aan de voorgestelde wijzigingen aan artikel 4, 6, 8 en 12 van het Politiereglement op de begraafplaatsen zodat er een correcte verwijzing is naar het gewijzigde van toepassing zijnde retributiereglement en het nieuwe huishoudelijk reglement op de begraafplaatsen.  </p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Financiën</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Team Hulpdiensten</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0504.9965.1767">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">15</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0504.9965.1767" class="title">2023_GR_00488 - Rekeningen van de Politie - dienstjaar 2022 - Vaststelling</a>
+            </div>
+            <div class="summary"><p align="LEFT">Aan de gemeenteraad wordt gevraagd de begrotingsrekening en de balans en resultatenrekening 2022 van de Politiezone Gent vast te stellen.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Facility Management</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Vastgoed</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0330.3939.5200">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">60</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0330.3939.5200" class="title">2023_GR_00461 - Lichten van een ruiloptie met betrekking tot verscheidene percelen grond gelegen te Gent, Francisco Ferrerlaan, Clematisstraat, Leliestraat en Irisstraat, eigendom van de Stad Gent, met verscheidene percelen grond gelegen te Gent, Francisco Ferrerlaan en Leliestraat, eigendom van Thuispunt Gent - Goedkeuring</a>
+            </div>
+            <div class="summary">Aan de gemeenteraad wordt gevraagd zijn goedkeuring te verlenen aan het lichten van een ruiloptie met betrekking tot verscheidene percelen grond gelegen nabij de Francisco Ferrerlaan, Clematisstraat, Leliestraat en Irisstraat te 9000 Gent, eigendom van de Stad Gent met twee percelen grond gelegen nabij de Francisco Ferrerlaan en de Leliestraat te 9000 Gent, eigendom van Thuispunt Gent.</div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0404.6662.0905">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">61</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0404.6662.0905" class="title">2023_GR_00462 - Lichten van een optie tot kosteloze verwerving van verscheidene percelen grond gelegen te Gent, Sint-Bernadettestraat  - Goedkeuring</a>
+            </div>
+            <div class="summary">Aan de gemeenteraad wordt gevraagd de optie tot kosteloze verwerving te lichten met betrekking tot diverse onroerende goederen gelegen in de Sint-Bernadettestraat 272, te 9000 Gent.</div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0421.5160.9194">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">62</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0421.5160.9194" class="title">2023_GR_00463 - Sluiten van een overeenkomst  tot kosteloze verwerving van de onroerende goederen gelegen te Gent, Maisstraat  - Goedkeuring</a>
+            </div>
+            <div class="summary">Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de overeenkomst tot kosteloze verwerving van diverse onroerende goederen gelegen, te Gent, Maisstraat (voormalige UCO site)<p>Deze gronden dienen overgedragen te worden naar de Stad in functie van de verdere reconversie van de voormalige UCO site en in uitvoering van de BSO's hiertoe afgesloten.</p></div>
+        </li>
+    </ul>
+    
+        
+        
+        
+        
+        
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0425.5293.4950">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">63</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0425.5293.4950" class="title">2023_GR_00455 - Eredienst - Diverse kerkbesturen - Jaarrekening over het dienstjaar 2022 - (reeks 3) - Advies</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd gunstig advies uit te brengen, over de rekeningen voor het dienstjaar 2022 &ndash; reeks 3 van de kerkbesturen van: Sint Simon &amp; Judas (Gent-Gentbrugge) en Gereformeerd Kerkcentrum Kerk aan de Leie.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Aankoop en Logistiek - STAD</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0323.5983.5823">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">64</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0323.5983.5823" class="title">2023_GR_00391 - Overheidsopdracht van werken - Raamovereenkomst voor het vervangen van gebroken glas en aanverwante werken - SLS/2023/013 - ID5419 - Bestek - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het bestek vast te stellen voor de overheidsopdracht van werken voor Raamovereenkomst voor het vervangen van gebroken glas en aanverwante werken met als procedure openbare procedure en een totale raming van 765.256,12 euro + 145.243,88 euro (21% btw) = 910.500,00 euro, &nbsp;waarvan het geraamd aandeel voor het OCMW 80.000,00 &nbsp;euro (inclusief btw) bedraagt.</p><p>Het college van burgemeester en schepenen verleent toestemming om de procedure van bekendmaking reeds op te starten onmiddellijk na goedkeuring van het dossier door het college van burgemeester en schepenen met opening offertes evenwel na de datum van de gemeenteraad.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0316.0124.2499">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">65</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0316.0124.2499" class="title">2023_GR_00386 - Overheidsopdracht van diensten - Raamovereenkomst voor de aanstelling van energiedeskundigen voor de opmaak van EPC&#39;s (4 percelen) - SLS/2023/009 - ID5413 - Bestek - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het bestek vast te stellen voor de overheidsopdracht van diensten voor Raamovereenkomst voor de aanstelling van energiedeskundigen voor de opmaak van EPC's (4 percelen) met als procedure openbare procedure en een totale raming van 374.125,00 euro + 78.566,25 euro (21% btw) = 452.691,25 euro, waarvan het geraamd aandeel voor het OCMW 88.874,50 &nbsp;euro (inclusief btw) bedraagt.</p><p>De opdracht bestaat uit 4 percelen:<br>perceel 1:&nbsp;opmaak van EPC's Residentieel (EPC R) en EPC's Gemeenschappelijke Delen van een appartementsgebouw (EPC GD)<br>perceel 2:&nbsp;opmaak van EPC's niet residentieel (EPC (k)NR) voor FM Welzijn<br>perceel 3:&nbsp;opmaak van EPC's niet residentieel (EPC (k)NR) voor FM Themagebouwen<br>perceel 4:&nbsp;opmaak van EPC's niet residentieel (EPC (k)NR) voor FM Onderwijs</p><p>Het college van burgemeester en schepenen verleent toestemming om de procedure van bekendmaking reeds op te starten onmiddellijk na goedkeuring van het dossier door het college met opening offertes evenwel na de datum van de gemeenteraad.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0425.9502.8587">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">66</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0425.9502.8587" class="title">2023_GR_00464 - Overheidsopdracht van leveringen - Raamovereenkomst voor het leveren van HVAC en sanitair materiaal - SLS/2023/024 - ID5447 - Bestek - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het bestek vast te stellen voor de overheidsopdracht van leveringen voor het leveren van HVAC en sanitair materiaal - SLS/2023/024 - ID5447, met als procedure openbare procedure en een totale raming van 1.182.141,28 EUR + 248.249,67 EUR (21 % btw) = 1.430.390,95 EUR, waarvan het geraamd aandeel voor het OCMW 372.000,00 euro (inclusief btw) bedraagt.
+<br>
+
+
+Het college van burgemeester en schepenen verleent toestemming om de procedure van bekendmaking reeds op te starten onmiddellijk na goedkeuring van het dossier door het college met opening offertes evenwel na de datum van de gemeenteraad.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0420.2108.1099">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">67</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0420.2108.1099" class="title">2023_GR_00465 - Overheidsopdracht van leveringen - Raamovereenkomst voor het leveren van ferrometalen en non-ferrometalen - SLS/2023/028 - ID5453 - Bestek - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het bestek vast te stellen voor de overheidsopdracht van leveringen voor Raamovereenkomst voor het leveren van ferrometalen en non-ferrometalen - SLS/2023/028 - ID5453, met als procedure de vereenvoudigde onderhandelingsprocedure met voorafgaande bekendmaking en een totale raming van 185.950,41 euro + 39.049,59 euro (21 % btw) = 225.000,00 euro.<br>
+<br>
+Het college van burgemeester en schepenen verleent toestemming om de procedure van bekendmaking reeds op te starten onmiddellijk na goedkeuring van het dossier door het college met opening offertes evenwel na de datum van de gemeenteraad.</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Dienst FM Themagebouwen</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0328.7366.1073">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">68</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0328.7366.1073" class="title">2023_GR_00406 - Overheidsopdracht van werken - Raamovereenkomst voor depannages, herstellings- en renovatiewerken aan installaties voor toegangsbeheer behorende tot het patrimonium van de stad - Toetreding tot de raamovereenkomst van Politiezone Gent - Bestek TDG/2017/1079/SDS/EXP-INV/4335 - Beslissing tot afname - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd om de toetreding tot de door de Dienst FM Themagebouwen afgesloten overheidsopdracht van werken - Raamovereenkomst voor depannages, herstellings- en renovatiewerken aan installaties voor toegangsbeheer behorende tot het patrimonium van de stad - TDG/2017/1079/SDS/EXP-INV/4335 goed te keuren.</p><p>Het college van burgemeester en schepenen keurt goed om gedurende de periode van de overeenkomst af te nemen bij&nbsp;Ardovlam nv, (Alertis) Kruisboommolenstraat 13, 8800 Roeselare,&nbsp; tegen de prijzen van de goedgekeurde offerte.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0406.5890.8433">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">69</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0406.5890.8433" class="title">2023_GR_00405 - Overheidsopdracht van werken - Herinrichten kantoren, Sint-Michielsplein 9 - FAG/2023/008/KVDK/INV/5429 - Bestek - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het bestek vast te stellen voor de overheidsopdracht van werken voor Herinrichten kantoren, Sint-Michielsplein 9 met als procedure vereenvoudigde onderhandelingsprocedure met voorafgaande bekendmaking
+ en een totale raming van 160.809,62 EUR + 33.770,02 EUR (21%) = 194.579,64 EUR<br>
+<br>
+Het college van burgemeester en schepenen  verleent toestemming om de procedure van bekendmaking reeds op te starten onmiddellijk na goedkeuring van het dossier door het college met opening offertes evenwel na de datum van de gemeenteraad.</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Dienst FM Onderwijs</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0418.4101.7389">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">70</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0418.4101.7389" class="title">2023_GR_00466 - Overheidsopdracht van leveringen - Raamovereenkomst huur en aankoop van (klas)containers - FEG/2023/007/ID5422 - Bestek - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het bestek vast te stellen voor de overheidsopdracht van leveringen voor Raamovereenkomst huur en aankoop van (klas)containers met als procedure openbare procedure en een totale raming van 3.389.372 EUR + 406.724,64 EUR (gemengde btw) = 3.796.096,64 EUR, waarvan het geraamd aandeel voor het OCMW 200.000 euro (inclusief btw) bedraagt.</p><p>Het college van burgemeester en schepenen verleent toestemming om de procedure van bekendmaking reeds op te starten onmiddellijk na goedkeuring van het dossier door het college met opening offertes evenwel na de datum van de gemeenteraad.
+</p><p><br></p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>IVA Mobiliteitsbedrijf</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Straatparkeren</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0420.6749.0809">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">71</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0420.6749.0809" class="title">2023_GR_00444 - Overheidsopdracht van diensten - Uitvoeren van parkeercontroles - MB 05/2023 - Bestek - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het bestek vast te stellen voor de overheidsopdracht van diensten - Uitvoeren van parkeercontroles - MB 05/2023, met een openbare procedure en een totale raming van 5.229.361,67 EUR (excl. BTW).<em><strong><br></strong></em></p><p><br><br>
+</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Technische ondersteuning</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0502.0215.1919">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">73</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0502.0215.1919" class="title">2023_GR_00501 - Overheidsopdracht van Levering - Levering 4G modems voor parkeerautomaten type Strada - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad&nbsp;wordt gevraagd de procedure en voorwaarden vast te stellen voor de overheidsopdracht van Levering voor MB 06/2023 Levering 4G modems voor parkeerautomaten type Strada met als procedure de onderhandelingsprocedure zonder voorafgaande bekendmaking. Tevens wordt gevraagd om de opdracht te gunnen aan Flowbird SAS, Lambroekstraat 5A, 1831 Diegem.
+</p>
+<p><br></p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Onderwijs, Opvoeding en Jeugd</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Educatieve Diensten</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0322.7781.7363">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">74</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0322.7781.7363" class="title">2023_GR_00408 - Reglement voor het ontlenen van educatief materiaal - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het 'Reglement voor het ontlenen van educatief materiaal' te wijzigen, met ingang van 01/06/2023.</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Kinderopvang</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0324.5654.9817">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">75</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0324.5654.9817" class="title">2023_GR_00387 - Sociale voordelen en de bijhorende normen en modaliteiten i.h.k.v. flankerend onderwijsbeleid  - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd om de sociale voordelen m.b.t. toezicht vast te stellen en de bijhorende normen en modaliteiten die gecreëerd worden voor kleuters en leerlingen lager onderwijs in het stedelijk onderwijs.&nbsp;Volgens de berekeningen  wordt er bij toepassing van de geldende tarieven uit het retributiereglement een sociaal voordeel gecreëerd voor de stedelijke scholen voor wat het ochtend- en avondtoezicht betreft van kleuters en leerlingen lagere school. Voor wat het middagtoezicht betreft, geldt er enkel een sociaal voordeel voor kleuters; voor lagere schoolkinderen overstijgen de inkomsten de uitgaven. In de berekeningen is rekening gehouden met het kortingstarief (“sociale korting”) dat conform het retributiereglement wordt toegepast voor een deel van de leerlingen. Dit geldt als rapportage voor het schooljaar 2022-2023.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0424.7632.7076">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">76</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0424.7632.7076" class="title">2023_GR_00411 - Nieuw subsidiereglement voor de buitenschoolse opvang voor niet-stedelijk kleuter- en lager onderwijs - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Het &#39;Subsidiereglement voor de buitenschoolse opvang voor niet-stedelijk kleuter- en lager onderwijs&#39; werd aangepast in het kader van de afstemming met de regelgeving rond sociale voordelen m.b.t. toezicht. </p><p>Aan de gemeenteraad wordt gevraagd het nieuw subsidiereglement goed te keuren, met inwerkingtreding op 1 juni 2023, en het subsidiereglement dat werd goedgekeurd in de gemeenteraad van 23 maart 2020 op te heffen.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0427.5881.7742">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">77</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0427.5881.7742" class="title">2023_GR_00412 - Overheidsopdracht van diensten - Begeleidingsopdracht bij BOA-proefproject:  opbouw en ondersteuning van kleuteropvang en naschoolse activiteiten  in 2 pilootwijken- Bestek - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het bestek vast te stellen voor de overheidsopdracht van diensten - 'Begeleidingsopdracht bij het BOA-proefproject: opbouw en ondersteuning van kleuteropvang en naschoolse activiteiten in 2 pilootwijken', met als procedure de vereenvoudigde onderhandelingsprocedure met bekendmaking en een totale raming van 212.397 euro + 44.603 euro (21% BTW) = 257.000 euro.<br><br><br></p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Jeugddienst</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0413.3827.1316">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">78</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0413.3827.1316" class="title">2023_GR_00392 - Toekenning van een nominatieve structurele subsidie voor de organisatie van Student Kick-Off 2022 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de toekenning van een structurele subsidie van <strong>5.500</strong> euro die nominatief in de meerjarenplanning 2020 - 2025, goedgekeurd in zitting van de gemeenteraad van 17 december 2019, is opgenomen, aan Student-Kick-Off vzw, Blekerijstraat 75, bus 3, 9000 Gent voor de organisatie van een onthaalevenement voor en door studenten in 2022.</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>IVA Stedelijk Onderwijs Gent</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0427.0843.4343">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">79</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0427.0843.4343" class="title">2023_GR_00410 - Globaal afsprakenkader inzake deconnectie Stedelijk Onderwijs Gent  - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het globale afsprakenkader inzake deconnectie voor het Stedelijk Onderwijs Gent goed te keuren.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0420.4155.5061">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">80</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0420.4155.5061" class="title">2023_GR_00409 - Naamswijziging van basisschool &#39;De Zonnepoort - De Zonnewijzer&#39; naar basisschool &#39;De Zonnepoort&#39; - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd met ingang van 1 september 2023 goedkeuring te verlenen aan de naamswijziging van basisschool &quot;De Zonnepoort - De Zonnewijzer&quot; naar basisschool &quot;De Zonnepoort&quot;.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Stedelijke Ontwikkeling</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Groendienst</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0404.0536.4864">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">82</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0404.0536.4864" class="title">2023_GR_00395 - Samenwerkingsovereenkomst Nationaal Park Scheldevallei - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de samenwerkingsovereenkomst Nationaalpark Scheldevallei en principieel akkoord te gaan met de jaarlijkse bijdrage van 20.000 euro aan de nog op te richten vzw Nationaal Park Scheldevallei in 2024 en 2025 van zodra er een definitieve erkenning werd verkregen voor het Nationaal Park Scheldevallei en bij oprichting van de vzw. Bij het begin van elke volgende legislatuur wordt het aandeel van de Stad Gent voor herbevestiging
+aan de gemeenteraad voorgelegd, via de goedkeuring van de meerjarenbegroting van de Stad Gent. Tevens wordt gevraagd principieel akkoord te gaan met de oprichting van de 'vzw Nationaal Park Scheldevallei' en de toetreding van Stad Gent tot deze vzw. 
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0502.7204.0555">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">83</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0502.7204.0555" class="title">2023_GR_00507 - Nieuw reglement voor hergebruik van een grafkelder met waardevol grafteken - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het <span>&#39;Reglement voor hergebruik van een grafkelder met waardevol grafteken&#39; dat ingaat op 1 juli 2023 goed te keuren en daarbij het &#39;Reglement voor hergebruik van een waardevol grafmonument&#39;, goedgekeurd in de gemeenteraad van 17 december 2018, op te heffen.
+<br></span></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0503.5935.8944">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">84</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0503.5935.8944" class="title">2023_GR_00508 - Nieuw reglement voor peter-/meterschap van een grafteken - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd om goedkeuring te verlenen aan een nieuw &#39;Reglement voor peter-/meterschap van een grafteken&#39;, met inwerkingtreding op 1 juli 2023 en aan de opheffing van het &#39;Reglement voor peter-/meterschap van een grafmonument&#39;, goedgekeurd in de gemeenteraad van 26 oktober 2015.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0503.9938.1774">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">85</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0503.9938.1774" class="title">2023_GR_00509 - Nieuw huishoudelijk reglement begraafplaatsen - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd een nieuw &#39;Huishoudelijk reglement begraafplaatsen&#39;, dat ingaat op 1 juli 2023,
+goed te keuren en daarbij het &#39;Huishoudelijk Reglement begraafplaatsen&#39; dat werd goedgekeurd in de gemeenteraad van 22 juni 2020 op
+te heffen.</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Wegen, Bruggen en Waterlopen</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0406.3679.5062">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">86</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0406.3679.5062" class="title">2023_GR_00393 - Samenwerkingsovereenkomst betreffende de gezamenlijke opdracht van werken - studie en de uitvoering van werken- herinrichting van de Herlegemstraat te Gent en Destelbergen - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de <span>samenwerkingsovereenkomst met gemeente Destelbergen en Farys betreffende de studie en de uitvoering van werken - herinrichting van de Herlegemstraat te Gent en Destelbergen.</span></p><p><span><span>(kenmerk: TDWCOL2023/47).</span></span></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0418.6400.0188">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">87</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0418.6400.0188" class="title">2023_GR_00447 - Overheidsopdracht van werken - Wegenis- en rioleringswerken in de Braemkasteelstraat en Emanuel Hielstraat te Gentbrugge - stadsaandeel in  het ontwerp van de werken (besteknummer DOM-061-14-017-Z BIS van FARYS) - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het stadsaandeel in het ontwerp van de werken met betrekking tot de w<span>egenis- en rioleringswerken in de de Braemkasteelstraat en Emanuel Hielstraat te Gentbrugge&nbsp;</span>(besteknummer DOM-061-14-017-Z - BIS van Farys), goed te keuren.</p>
+<p>Farys treedt op als leidinggevend bestuur voor het geheel van de werken.</p>
+<p><span style="background-color: #ffffff;">Procedure: openbare procedure</span><br><span style="background-color: #ffffff;">Uitvoeringste</span>rmijn<span style="background-color: #ffffff;">: 240 werkdagen.</span></p>
+<p><span style="background-color: #ffffff;">Gunningscriteria: prijs</span></p>
+<p><span style="background-color: #ffffff;">Raming werken:4.221.670,52 euro exclusief btw, waarvan &nbsp;2.346.204,28 euro ten laste van Farys, 334.438,85 euro ten laste van Elia en 1.541.027,39 euro + 323.615,75 euro (21 % btw) = 1.864.643,14 euro ten laste van de Stad.</span></p>
+<p><span style="background-color: #ffffff;"><span>Het college stemt in met het onmiddellijk opstarten van de aanbestedingsprocedure door Farys evenwel met opening van de offertes na goedkeuring van het stadsaandeel in het ontwerp van de werken door de gemeenteraad.</span></span></p>
+<p><br></p><p><span>(kenmerk: TDWCOL2023/49 - DOM-061-14-017-Z - BIS)</span></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0426.0189.6935">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">88</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0426.0189.6935" class="title">2023_GR_00448 - Overheidsopdracht van werken - Mendonk - stadsaandeel in  het ontwerp van de werken - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het stadsaandeel in het ontwerp van de werken Mendonk goed te keuren.</p>
+<p>Aquafin treedt op als leidinggevend bestuur voor het geheel van de werken.</p>
+<p><span style="background-color: #ffffff;">Procedure: openbare procedure</span><br><span style="background-color: #ffffff;">Uitvoeringste</span>rmijn<span style="background-color: #ffffff;">: 250 + 15 werkdagen.</span></p>
+<p><span style="background-color: #ffffff;">Gunningscriteria: prijs</span></p>
+<p>Raming werken:</p><p>Totaalbedrag: 8.443.503,28 euro excl. btw&nbsp;</p><p>Deel ten laste van Aquafin: 4.215.592,60 euro excl. btw&nbsp;</p><p>Deel ten laste van Farys: 2.632.135,74 euro excl. btw.&nbsp;</p><p>Deel Stad Gent ten laste van Farys:&nbsp;1.203.589,95&nbsp;euro excl. btw.</p><p>Deel Stad Gent ten laste van Stad Gent: 392 184,99 euro excl. btw + 82.358,85 euro (21% btw) = &nbsp;474.543,84 euro incl. btw.</p>
+<p><span style="background-color: #ffffff;"><span>Het college stemt in met het onmiddellijk opstarten van de aanbestedingsprocedure door Aquafin evenwel met opening van de offertes na goedkeuring van het stadsaandeel in het ontwerp van de werken door de gemeenteraad.</span></span></p>
+<p><br></p><p><span>(kenmerk: TDWCOL2023/57 - 20.632B)</span></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0428.0916.5837">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">89</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0428.0916.5837" class="title">2023_GR_00486 - Principiële vaststelling van de namen &#39;Rootgrachtpad&#39; en &#39;Industriepark-Drongen&#39; voor het nieuwe fiets- en wandelpad tussen Industriepark-Drongen en Noordhoutstraat en voor de gedeeltelijke straatnaamwijziging van Kloosterstraat voor het straatdeel tussen Industriepark-Drongen en Baarleveldestraat te Drongen - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd de namen &#39;Rootgrachtpad&#39; en &#39;Industriepark-Drongen&#39; 
+ principieel vast te stellen voor het nieuwe fiets- en wandelpad tussen Industriepark-Drongen en Noordhoutstraat en voor de gedeeltelijke straatnaamwijziging van Kloosterstraat voor het straatdeel tussen Industriepark-Drongen en Baarleveldestraat te Drongen.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0502.2927.6547">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">90</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0502.2927.6547" class="title">2023_GR_00487 - Principiële vaststelling van de naam &#39;Turkooispad&#39; voor de gedeeltelijke straatnaamwijziging van Smaragdstraat voor het straatdeel tussen de brug en het Turkooispad te Gent - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd de naam &#39;Turkooispad&#39; principieel vast te stellen voor de gedeeltelijke straatnaamwijziging van Smaragdstraat voor het straatdeel tussen de brug en het Turkooispad te Gent.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Cultuur, Sport en Vrije Tijd</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Feesten en Ambulante Handel</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0119.9221.1963">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">93</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0119.9221.1963" class="title">2023_GR_00384 - Subsidieovereenkomst voor de organisatie van de Oogststoet in Oostakker - werkingsjaren 2023-2025 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de subsidieovereenkomst voor de organisatie van de Oogststoet in Oostakker voor de werkingsjaren 2023-2025 met vzw Comit&eacute; Oogststoet Oostakker, Faltselestraat 24 te 9041 Gent (Oostakker), waarbij een subsidie wordt toegekend van 11.000 euro per werkingsjaar.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0329.0195.6795">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">94</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0329.0195.6795" class="title">2023_GR_00385 - Subsidieovereenkomst voor de organisatie van de Lichtstoet in Ledeberg - werkingsjaren 2023-2025 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de subsidieovereenkomst voor de organisatie van de Lichtstoet in Ledeberg voor de werkingsjaren 2023-2025, met vzw Nationale Ajuinmarkt Comit&eacute; Ledeberg, August Van Lokerenstraat 18 te 9050 Gent (Ledeberg), waarbij een subsidie wordt toegekend van 30.000 euro per werkingsjaar.</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>IVA Historische Huizen Gent</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0405.6331.4651">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">95</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0405.6331.4651" class="title">2023_GR_00336 - Wijziging aan de algemene voorwaarden bij de samenwerkingsovereenkomst voor het aanbieden van de museumpas in de Sint-Pietersabdij - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de wijzigingen aan de algemene voorwaarden bij de samenwerkingsovereenkomst voor het aanbieden van de museumpas in de Sint-Pietersabdij  met MuseumPASSmus&eacute;es cvba, zoals beslist op de algemene vergadering van museumPASSmus&eacute;es cvba en gepubliceerd op 22 februari 2023 en &eacute;&eacute;nzijdig van toepassing voor alle musea lid van deze cvba vanaf 30 dagen na publicatie, in casu vrijdag 24 maart 2023.</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Staf</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0414.5188.7642">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">97</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0414.5188.7642" class="title">2023_GR_00396 - Aanvaarding van de schenking door AGB Kunsten en Design van collectiestukken - overdracht 2022 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de aanvaarding van de schenking van diverse collectiestukken - overdracht 2022 - door AGB Kunsten en Design aan de Stad Gent. Aan de schenking zijn voor de Stad Gent geen voorwaarden gekoppeld.<br>Het college van burgemeester en schepenen vraagt hierover advies aan de Cultuurraad.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0414.1719.2333">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">98</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0414.1719.2333" class="title">2023_GR_00397 - Aanvaarding van de schenking door AGB Erfgoed van collectiestukken - overdracht 2022 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de aanvaarding van de schenking van diverse collectiestukken - overdracht 2022 - door AGB Erfgoed aan de Stad Gent. Aan de schenking zijn voor de Stad Gent geen voorwaarden gekoppeld.<br>Het college van burgemeester en schepenen vraagt hierover advies aan de Cultuur</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Cultuurdienst</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0424.5624.9420">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">99</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0424.5624.9420" class="title">2023_GR_00454 - Subsidiereglement voor de financiële ondersteuning van Gentse amateurkunstenverenigingen voor muziek voor de periode 2023-2025 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het 'Subsidiereglement voor de financiële ondersteuning van Gentse amateurkunstenverenigingen voor muziek' goed te keuren voor de periode 2023-2025.</p>
+<p>Het college van burgemeester en schepenen legt het voorstel van subsidiereglement voor advies voor aan de Cultuurraad.</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Sportdienst</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0509.1667.2862">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">100</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0509.1667.2862" class="title">2023_GR_00504 - Overheidsopdracht van werken - bestek der werken CREAT 061-22-001-BIS &#39; Het aanstellen van een aannemer voor de sloop en bouw van een wedstrijdtoren gelegen aan de Yachtdreef te Gent - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad &nbsp;wordt gevraagd  het nieuwe bestek der werken  'Aanstellen van een aannemer voor de sloop en bouw van een wedstrijdtoren gelegen aan de Yachtdreef te Gent' met als procedure openbare procedure en een totale raming van 1.357.637,40 euro + 285.103,85 euro (21 % btw) = 1.642.741,25 euro vast te stellen.<br>Het college van burgemeester en schepenen verleent toestemming aan TMVW om de procedure van bekendmaking reeds op te starten onmiddellijk na goedkeuring van het dossier door het college met opening offertes evenwel na de datum van de gemeenteraadszitting waarin de gemeenteraad  het bijzonder bestek der werken vaststelt.
+</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Politie - Directie Beheer</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>HRM</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0404.8744.9776">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">101</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0404.8744.9776" class="title">2023_GR_00490 - Administratief en logistiek kader - Vacantverklaring van 1 betrekking van assistent (niveau C) bij de Dienst Informatie, Analyse en Kennisbeheer - Dringende, externe contractuele werving voor de duur van 1 jaar - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd om goedkeuring te verlenen aan de vacantverklaring via externe, contractuele werving om dringende redenen van 1 betrekking van assistent (niveau C) bij de Dienst Informatie, Analyse en Kennisbeheer van de Politiezone Gent. De aangeboden arbeidsovereenkomst heeft een duurtijd van 1 jaar.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0403.6870.9208">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">102</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0403.6870.9208" class="title">2023_GR_00492 - Convenant voor de afname van diensten (politieopleidingen en gebruik van infrastructuur) bij de provinciale politieschool PAULO in het dienstjaar 2023 en de financiering ervan - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>De Politiezone Gent wenst voor het dienstjaar 2023 opnieuw een convenant af te sluiten met de provincie Oost-Vlaanderen voor de afname van diensten (opleidingen, gebruik van traininginfrastructuur) bij de provinciale politieschool PAULO/Politieopleidingen.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0503.8587.4251">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">103</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0503.8587.4251" class="title">2023_GR_00493 - Administratief en logistiek kader - Vacantverklaring van 1 betrekking van consulent (niveau B) bij de Dienst Human Resources - Dringende, externe contractuele werving voor de duur van 1 jaar - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd om goedkeuring te verlenen aan de vacantverklaring via externe, contractuele werving om dringende redenen van 1 betrekking van consulent (niveau B) bij de Dienst Human Resources van de Politiezone Gent. De aangeboden arbeidsovereenkomst heeft een duurtijd van 1 jaar.</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Financiën en Middelen</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0428.3412.7579">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">104</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0428.3412.7579" class="title">2023_GR_00459 - Politiezone Gent - Overheidsopdracht van diensten - Opdracht tot het takelen, vervoeren en bewaren van voertuigen met een maximaal toegelaten massa van 3,5 ton in opdracht van de Politiezone Gent - 2023/6732 - Bestek - Vaststelling</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het bestek vast te stellen van de overheidsopdracht van diensten voor het takelen, vervoeren en bewaren van voertuigen met een maximaal toegelaten massa van 3,5 ton in opdracht van de Politiezone Gent - 2023/6732 - met als procedure de openbare procedure en een totale raming van € 1.322.314,05 + € 277.685,95 = € 1.600.000,00</p>
+<p>Deze opdracht zal worden gepubliceerd in het Bulletin der Aanbestedingen en het Europees Publicatieblad.</p>
+<p>Het college van burgemeester en schepenen verleent toestemming om de procedure van bekendmaking reeds op te starten onmiddellijk na goedkeuring van het dossier door het college met opening offertes evenwel na de datum van de gemeenteraad.&nbsp;</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Welzijn en Samenleving</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Preventie voor Veiligheid</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0221.9230.6858">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">106</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0221.9230.6858" class="title">2023_GR_00497 - Overeenkomst betreffende de financiering van de leerstoel van de UGent ‘Polarisering, Radicalisering en Samenleving&#39; - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de overeenkomst betreffende de financiering van de leerstoel 'Polarisering, Radicalisering en Samenleving', met de Universiteit Gent (UGent), bestuurszetel gevestigd te Sint-Pietersnieuwstraat 25, 9000 Gent, en de Politiezone Gent, voor de periode 01/06/2023 - 31/12/2025, waarbij een subsidie wordt toegekend van 15.000,00 euro.&nbsp;</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Lokaal sociaal beleid</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0412.2796.6934">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">107</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0412.2796.6934" class="title">2023_GR_00394 - Toekenning van een nominatieve, structurele subsidie (budget 2023) aan de Stedelijke Adviesraad voor Personen met een Handicap (SAPH) voor zijn werking - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de betaalbaarstelling van een structurele nominatieve subsidie - budget 2023 - van 7579,22 euro -&nbsp;aan de Stedelijke Adviesraad voor Personen met een Handicap (SAPH), opgenomen in de meerjarenplanning 2020-2025, goedgekeurd in zitting van de raad van 17 december 2019, en overeenkomstig het gemeenteraadsbesluit van 22 juni 2021 tot de vaststelling van de aanpassing van het meerjarenplan 2020-2025, met als doel zijn werking te continueren.
+</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>AGB Erfgoed</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Zakelijke Werking</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0412.0483.3117">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">108</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0412.0483.3117" class="title">2023_GR_00380 - Autonoom Gemeentebedrijf Erfgoed - Jaarrekening 2022 - Advies</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd advies uit te brengen over de jaarrekening 2022 van AGB Erfgoed en de bijhorende BBC (beleids- en beheerscyclus)-rapportering, zoals vastgesteld door de raad van bestuur op 30 maart 2023.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0412.7339.2141">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">109</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0412.7339.2141" class="title">2023_GR_00381 - Autonoom Gemeentebedrijf Erfgoed -  verslag van de commissaris revisor over de Jaarrekening 2022  - Kennisneming - Kwijting aan de bestuurders en commissaris-revisor - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd kennis te nemen van het verslag van de commissaris-revisor over de jaarrekening 2022 van AGB Erfgoed en de bijhorende BBC (beleids- en beheerscyclus)-rapportering, zoals vastgesteld door de raad van bestuur op 30 maart 2023. Aan de gemeenteraad wordt gevraagd kwijting te verlenen aan zowel de bestuurders als de commissaris-revisor.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>AGB Kunsten en Design</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Zakelijke Werking</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0412.1791.0197">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">111</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0412.1791.0197" class="title">2023_GR_00382 - Autonoom Gemeentebedrijf Kunsten en Design - Jaarrekening 2022 - Advies</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd advies uit te brengen over de jaarrekening 2022 en de bijhorende BBC (beleids- en beheerscyclus)-rapportering, zoals vastgesteld door de raad van bestuur op 30 maart 2023.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0412.9474.8342">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">112</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0412.9474.8342" class="title">2023_GR_00383 - Autonoom Gemeentebedrijf Kunsten en Design -  verslag van de commissaris revisor over de Jaarrekening 2022 - Kennisneming - Kwijting aan de bestuurders en commissaris-revisor - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd kennis te nemen van het verslag van de commissaris-revisor over de jaarrekening 2022 en de bijhorende BBC (beleids- en beheerscyclus)-rapportering, zoals vastgesteld door de raad van bestuur op 30 maart 2023. Aan de gemeenteraad wordt gevraagd kwijting te verlenen aan zowel de bestuurders als de commissaris-revisor.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Gezondheid en Zorg</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Regie Gezondheid en Zorg</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0414.1798.0190">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">114</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0414.1798.0190" class="title">2023_GR_00442 - Subsidieovereenkomst voor de inzet op het ondersteunen van de Gentse scholen op vlak van gezondheidsbevordering en ziektepreventie- periode 01/07/2023 tot en met 31/12/2025  - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de subsidieovereenkomst voor de inzet op het ondersteunen van de Gentse scholen op vlak van gezondheidsbevordering en ziektepreventie - periode 01/07/2023 tot en met 31/12/2025 -  met Logo Gezond+ vzw, Groot Begijnhof 24, 9040 Sint-Amandsberg, waarbij een subsidie wordt toegekend van 15.380 euro voor de periode 1/7/2023 tot en met 31/12/23, en 30.760 euro per jaar voor de periode van&nbsp;1/1/2024 tem 31/12/2025.<em></em></p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Omgevingsvergunningen</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Stedenbouw en Ruimtelijke Planning</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0425.9414.7500">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">116</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0425.9414.7500" class="title">2023_GR_00450 - De verplaatsing van een gemeenteweg in kader van OMV_2023011422 R - aanvraag omgevingsvergunning voor het opbreken van 200 meter bestaande wegenis (fietspad en weg) en het aanleggen van de wegenis langs het nieuwe tracé (+/- 370m) inclusief de opbraak en het heraanleggen van het rioleringsstelsel  - met openbaar onderzoek - Philips Landsbergiuslaan, 9000 Gent  - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd om&nbsp;een rooilijnplan goed te keuren en om de aanleg, verplaatsing&nbsp;van een gemeenteweg goed te keuren zoals ontworpen in de&nbsp;omgevingsvergunningsaanvraag nr. OMV_2023011422 aan Philips Landsbergiuslaan zodat de voorwaarden waaronder de omgevingsvergunning kan verleend worden, kunnen vastgesteld worden.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0503.9077.0658">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">117</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0503.9077.0658" class="title">2023_GR_00502 - De aanleg van een gemeenteweg in kader van OMV_2021081181 R - aanvraag omgevingsvergunning voor de aanleg van een fietsbrug thv Eiland Zwijnaarde - met openbaar onderzoek - Kappetragel, Scheldekant, Scheldepad, Suzanne Tassierstraat en Tij-armpad, 9052 Zwijnaarde - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Een aanvraag omgevingsvergunning met stedenbouwkundige handelingen werd ingediend.</p><p>&bull; Onderwerp: de aanleg van een fietsbrug thv Eiland Zwijnaarde<br>&nbsp;&bull; Bevoegde overheid: Vlaamse regering</p><p>&bull; Procedure: gewone procedure</p><p>&bull; Aantal bezwaren :</p><p>Eerste openbaar onderzoek:</p><p>4 bezwaren ingediend.</p><p>Tweede openbaar onderzoek:</p><p>2 bezwaren ingediend.</p><p>&bull; Aanvrager: De Vlaamse Waterweg nv gevestigd te Guldensporenpark 105 te 9820 Merelbeke en de heer Wim Dauwe wonende te Steenweg van Grembergen 75 te 9200 Dendermonde<br>&nbsp;&bull; Adres: Kappetragel , Scheldekant , Scheldepad , Suzanne Tassierstraat &nbsp;en Tij-armpad , 9052 Zwijnaarde (afd. ) sectie B 142 P, (afd. ) sectie B 143 D, (afd. ) sectie B 144 E, (afd. ) sectie B 144 D, (afd. ) sectie B 144 B, (afd. ) sectie B 145 D, (afd. ) sectie D 609 S, (afd. ) sectie D 609 C2, (afd. ) sectie D 609 T, (afd. ) sectie D 609 H2, (afd. ) sectie D 609 D2, (afd. ) sectie D 623 C, (afd. ) sectie D 624 A, (afd. 24) sectie B 627 P, (afd. 24) sectie B 628 D, (afd. 24) sectie B 628 E, (afd. 24) sectie B 628 F en (afd. 24) sectie B 647 N</p><p>Aan de gemeenteraad wordt gevraagd om&nbsp;een rooilijnplan goed te keuren en om de aanleg van een gemeenteweg goed te keuren zoals ontworpen in de&nbsp;omgevingsvergunningsaanvraag nr. OMV_2021081181 aan Kappetragel , Scheldekant, Scheldepad , Suzanne Tassierstraat en Tij-armpad zodat de omgevingsvergunning kan verleend worden.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0504.1048.6022">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">118</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0504.1048.6022" class="title">2023_GR_00503 - De aanleg, wijziging en gedeeltelijke opheffing van een gemeenteweg in kader van OMV_2022135262 - aanvraag omgevingsvergunning voor het realiseren van een nieuw onderwijsgebouw, studentenhuisvesting en buurtpark  - met openbaar onderzoek - Bargiekaai en Gebroeders De Smetstraat, 9000 Gent  - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Een aanvraag omgevingsvergunning met stedenbouwkundige handelingen en een ingedeelde inrichting of activiteit werd ingediend.</p><p>&bull; Onderwerp: het realiseren van een nieuw onderwijsgebouw, studentenhuisvesting en buurtpark<br>&nbsp;&bull; Bevoegde overheid: college van burgemeester en schepenen</p><p>&bull; Procedure: gewone procedure</p><p>&bull; Aantal bezwaren :1 bezwaar</p><p>&bull; Aanvrager: Katholieke Universiteit te Leuven AV gevestigd te Oude Markt 13 te 3000 Leuven<br>&nbsp;&bull; Adres: Bargiekaai 9, 21, 21-25H, 22, 23, 25, 25H en Gebroeders De Smetstraat 1-1A, 9000 Gent (afd. 10) sectie K 71 W3, (afd. 10) sectie K 71 T3, (afd. 15) sectie F 3635 V8, (afd. 15) sectie F 3649 N, (afd. 15) sectie F 3658 D, (afd. 15) sectie F 3658 G, (afd. 15) sectie F 3666 C, (afd. 15) sectie F 3677 H, (afd. 15) sectie F 3677 E, (afd. 15) sectie F 3677 L, (afd. 15) sectie F 3677 F, (afd. 15) sectie F 3677 G, (afd. 15) sectie F 3685 D2, (afd. 15) sectie F 3685 B2, (afd. 15) sectie F 3719 C3, (afd. 15) sectie F 3719 D3, (afd. 15) sectie F 3719 G3, (afd. 15) sectie F 3719 A3, (afd. 15) sectie F 3719 H3, (afd. 15) sectie F 3719 F3 en (afd. 15) sectie F 3719 E3</p><p><strong>&nbsp;</strong></p><p>Aan de gemeenteraad wordt gevraagd om&nbsp;een rooilijnplan goed te keuren en om de aanleg, wijziging&nbsp;en gedeeltelijke opheffing van een gemeenteweg goed te keuren zoals ontworpen in de omgevingsvergunningsaanvraag nr. OMV_2022135262 aan Bargiekaai 9, 21, 21-25H, 22, 23, 25, 25H en Gebroeders De Smetstraat 1-1A zodat de voorwaarden en de lasten waaronder de omgevingsvergunning kan verleend worden, kunnen vastgesteld worden.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Bedrijfsvoering - Strategie en Organisatie</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Staf Bedrijfsvoering</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0426.7889.1104">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">119</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0426.7889.1104" class="title">2023_GR_00500 - Kenniscentrum Vlaamse Steden - Rekening 2022, aanpassing samenwerkingsovereenkomst 2022-2026, werkingsrapportering - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de&nbsp;rekening 2022, aanpassing samenwerkingsovereenkomst
+ 2022-2026 en het budget 2023 van het Kenniscentrum voor Vlaamse Steden zoals gevoegd in bijlage, en akte te nemen van het jaarverslag 2022 en het jaarplan 2023 van het Kenniscentrum voor Vlaamse Steden zoals gevoegd in bijlage.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>(onder) voorzitter gemeenteraad en raad voor maatschappelijk welzijn</h5>
+        
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0502.2563.4617">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">121</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0502.2563.4617" class="title">2023_GR_00404 - Notulen van de vergadering van de gemeenteraad van 24 en 25 april 2023 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd zijn goedkeuring te verlenen aan de notulen van de vergadering van de gemeenteraad van 24 en 25 april 2023.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        <h4>Bevoegdheid Stad en OCMW</h4>
+        
+        
+        
+    
+    
+        
+        
+        
+        <h5>Departement Facility Management</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Aankoop en Logistiek - STAD</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0413.6899.2715">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">123</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0413.6899.2715" class="title">2023_GR_00407 - Overheidsopdracht van diensten - Raamovereenkomst voor de fysiek aangeleverde uitgaande post  - Toetreding tot de raamovereenkomst van Creat - Beslissing tot afname - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd om de toetreding tot de door de Creat afgesloten raamovereenkomst voor de fysiek aangeleverde uitgaande post &nbsp;- &nbsp;met Postalia Belgium NV – Drève Gustave Fache 1, 7700 Moeskroen, onder de merknaam EasyPost goed te keuren.</p><p>Het college van burgemeester en schepenen keurt goed om gedurende 6 maanden af te nemen op de door Creat afgesloten raamovereenkomst voor de fysiek aangeleverde uitgaande post bij Farys, Stropstraat 1 te 9000 Gent, waarbij de dienstverlening wordt uitgevoerd door Postalia Belgium NV – Drève Gustave Fache 1, 7700 Moeskroen, onder de merknaam EasyPost
+tegen de prijzen van de goedgekeurde offerte.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+    
+        
+        <h3>Bureau - Interpellaties en voorstellen tot raadsbesluit (tijdsblok: 2 uur)</h3>
+        
+        
+        
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0524.0407.8447">
+            <div class="item">
+                
+                <div class="position float-left">IR 2</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0524.0407.8447" class="title">2023_IP_00023 - Interpellatie van raadslid Tom De Meester: Het beleid van de stad m.b.t. budgethuurwoningen stavaza</a>
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0524.0487.1082">
+            <div class="item">
+                
+                <div class="position float-left">IR 3</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0524.0487.1082" class="title">2023_VVB_00025 - Voorstel tot raadsbesluit van raadslid Karlijn Deene: Stadskermissen in ere herstellen via apart ondersteuningskader</a>
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0524.1614.5119">
+            <div class="item">
+                
+                <div class="position float-left">IR 4</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0524.1614.5119" class="title">2023_IP_00024 - Interpellatie van raadslid Anneleen Van Bossuyt: Bende van Wondelgem</a>
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0524.5301.1299">
+            <div class="item">
+                
+                <div class="position float-left">IR 5</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0524.5301.1299" class="title">2023_IP_00025 - Interpellatie van raadslid Caroline Persyn: Terreurbende in Wondelgem</a>
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0524.3732.0378">
+            <div class="item">
+                
+                <div class="position float-left">IR 6</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0524.3732.0378" class="title">2023_VVB_00026 - Voorstel tot raadsbesluit van raadslid Anneleen Van Bossuyt: Studie naar omvang en impact van geweld tegen politie</a>
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0525.1438.1240">
+            <div class="item">
+                
+                <div class="position float-left">IR 7</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0525.1438.1240" class="title">2023_VVB_00027 - Voorstel tot raadsbesluit van raadslid Yüksel Kalaz: Barbecue voor elke Gentenaar</a>
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0525.3686.6462">
+            <div class="item">
+                
+                <div class="position float-left">IR 9</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0525.3686.6462" class="title">2023_VVB_00029 - Voorstel tot raadsbesluit van raadslid Yüksel Kalaz: Tussentijdse evaluatie en bijsturing van de maatregel om de straatverlichting te doven</a>
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0525.9241.5903">
+            <div class="item">
+                
+                <div class="position float-left">IR 10</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0525.9241.5903" class="title">2023_IP_00026 - Interpellatie van raadslid Tom De Meester: De dramatische evolutie van het aantal sociale woningen in Gent</a>
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0530.5671.1486">
+            <div class="item">
+                
+                <div class="position float-left">IR 12</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0530.5671.1486" class="title">2023_IP_00027 - Interpellatie bij hoogdringendheid van raadslid Anneleen Van Bossuyt:  Opnieuw incidenten aan de Blaarmeersen</a>
+            </div>
+            
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        <h3>A-punten</h3>
+        
+        
+        
+        
+    
+    
+        
+        
+        <h4>Bevoegdheid Stad</h4>
+        
+        
+        
+    
+    
+        
+        
+        
+        <h5>Bedrijfsvoering</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Juridische Dienst</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0412.8644.6909">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">2</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0412.8644.6909" class="title">2023_GR_00390 - EVA vzw Wijk-werken – Algemene vergadering van 5 juni 2023 - Dagorde - Kennisneming - Mandaat van de vertegenwoordigers  van de Stad Gent - Goedkeuring</a>
+            </div>
+            <div class="summary"><p><span>Aan de gemeenteraad wordt &nbsp;gevraagd kennis te nemen van de dagorde en elk van de afzonderlijke punten van de dagorde van de algemene vergadering van 5 juni 2023 van het extern verzelfstandigd agentschap (EVA) vzw Wijk-werken en goedkeuring te verlenen aan het mandaat aan de vertegenwoordigers van de stad Gent die deelnemen aan deze algemene vergadering om:<br>- er aan alle beraadslagingen en stemmingen deel te nemen, alle voorstellen met betrekking tot de agenda goed te keuren, alle akten, stukken notulen, aanwezigheidslijsten te ondertekenen en in het algemeen, het nodige te doen, en<br>- deel te nemen aan elke latere algemene vergadering met dezelfde dagorde in geval de eerste algemene vergadering niet rechtsgeldig zou kunnen beraadslagen.</span><span>&nbsp;</span></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0417.0971.8657">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">3</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0417.0971.8657" class="title">2023_GR_00398 - Opdrachthoudende vereniging IGS Westlede - algemene vergadering van 30 mei 2023 - vaststelling van het mandaat van de vertegenwoordiger van Stad Gent - Bekrachtiging</a>
+            </div>
+            <div class="summary"><p><span>Aan de gemeenteraad wordt voorgesteld om de dagorde van de algemene vergadering van IGS Westlede die fysiek doorgaat op 30 mei 2023 om 19u goed te keuren, evenals het mandaat van de vertegenwoordiger van de Stad Gent op voormelde algemene vergadering te bekrachtigen.</span></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0417.9103.3803">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">4</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0417.9103.3803" class="title">2023_GR_00399 - Opdrachthoudende vereniging Imewo  -  algemene vergadering van 19 juni 2023  - vaststelling van het mandaat van de vertegenwoordiger van de Stad Gent - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd zijn goedkeuring te hechten aan:</p><p>- &nbsp;de agenda van de algemene vergadering van de opdrachthoudende vereniging Imewo die plaatsvindt op maandag 19 juni 2023 om 18 uur in het Beurs-, Meeting- en Congrescentrum (BMCC), Beursplein 1 te 8000 Brugge.</p><p>- het mandaat aan de vertegenwoordiger van de Stad Gent die zal deelnemen aan de algemene vergadering die plaatsvindt op 19 juni 2023&nbsp;</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0313.9304.4595">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">5</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0313.9304.4595" class="title">2023_GR_00388 - Bijzondere samenwerkingsovereenkomst (BSO) over de realisatie van budgethuurwoningen in Project Kaai 24 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd de bijzondere samenwerkingsovereenkomst (BSO) tussen Stad Gent en sogent over de realisatie van budgethuurwoningen in Project Kaai 24, zoals gevoegd in bijlage bij het besluit, goed te keuren.</p><p>De BSO formaliseert de afspraken tussen Stad Gent en sogent over de realisatie van budgethuurwoningen in het sogent Project Kaai 24.&nbsp;Stad Gent stelt 4,8 miljoen euro ter beschikking aan sogent om minimum 25&nbsp;budgethuurwoningen te realiseren en deze gedurende 50 jaar te verhuren aan Huuringent VZW. Huuringent VZW verhuurt deze budgethuurwoningen op haar beurt voor 50 jaar tegen een welbepaalde huurprijs  aan een welbepaalde doelgroep. De grond en de budgethuurwoningen zijn en blijven eigendom van sogent.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0427.8973.8245">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">7</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0427.8973.8245" class="title">2023_GR_00453 - EVA vzw Business Improvement District – Algemene vergadering van 22 juni 2023 - Dagorde - Kennisneming - Mandaat van de vertegenwoordigers  van de Stad Gent - Goedkeuring</a>
+            </div>
+            <div class="summary"><p><span>Aan de gemeenteraad wordt &nbsp;gevraagd kennis te nemen van de dagorde en elk van de afzonderlijke punten van de dagorde van de algemene vergadering van 22 juni 2023 van het extern verzelfstandigd agentschap (EVA) vzw Business Improvement District Gent en goedkeuring te verlenen aan het mandaat aan de vertegenwoordigers van de stad Gent die deelnemen aan deze algemene vergadering om:<br>- er aan alle beraadslagingen en stemmingen deel te nemen, alle voorstellen met betrekking tot de agenda goed te keuren, alle akten, stukken notulen, aanwezigheidslijsten te ondertekenen en in het algemeen, het nodige te doen, en<br>- deel te nemen aan elke latere algemene vergadering met dezelfde dagorde in geval de eerste algemene vergadering niet rechtsgeldig zou kunnen beraadslagen.</span><span>&nbsp;</span></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0502.0105.7533">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">9</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0502.0105.7533" class="title">2023_GR_00458 - Opdrachthoudende vereniging FARYS - algemene vergadering van 16 juni 2023 - vaststelling van het mandaat van de vertegenwoordiger van Stad Gent - Goedkeuring</a>
+            </div>
+            <div class="summary"><p><span>Aan de gemeenteraad wordt voorgesteld om de dagorde van de algemene vergadering van FARYS die plaatsvindt op vrijdag 16 juni 2023 om 14u30 te Flanders Expo, Maaltekouter 1 te 9051 Gent, met inbelmogelijkheid via Zoom, evenals het mandaat van de vertegenwoordiger van de Stad Gent op voormelde algemene vergadering goed te keuren.</span></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0504.3861.0854">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">10</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0504.3861.0854" class="title">2023_GR_00499 - Aanvraag van de Politiezone Gent tot principiële toestemming inzet van drones als mobiele camera&#39; s op het grondgebied van Politiezone Gent - Goedkeuring</a>
+            </div>
+            <div class="summary"><p><span>Aan de gemeenteraad wordt gevraagd een principi&euml;le toestemming te verlenen aan de vraag van de&nbsp;Politiezone Gent voor de inzet van mobiele camera&#39; s (drones),&nbsp;op niet-besloten plaatsen, besloten plaatsen voor het publiek toegankelijk alsook besloten plaatsen niet voor het publiek toegankelijk op het grondgebied van de Politiezone Gent voor de in dit besluit omschreven functionaliteiten.</span></p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Bestuursondersteuning</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0502.3161.1054">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">11</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0502.3161.1054" class="title">2023_GR_00402 - Aanduiding van een vertegenwoordiger van de Stad Gent op de algemene vergadering van 12 mei 2023 van de vzw Cevi  - Bekrachtiging</a>
+            </div>
+            <div class="summary">Aan de gemeenteraad wordt gevraagd de aanduiding van een vertegenwoordiger van de Stad Gent op de algemene vergadering van de vzw Cevi op 12 mei 2023 te bekrachtigen.</div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0504.9609.1374">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">12</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0504.9609.1374" class="title">2023_GR_00460 - Bevestiging van de voordracht van een kandidaat ter vertegenwoordiging van de Stad Gent in de raad van bestuur van de cvba Poolstok - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd de voordracht van de huidige vertegenwoordiger van de Stad Gent in de raad van bestuur van de cvba Poolstok te bevestigen.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0508.4994.4333">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">13</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0508.4994.4333" class="title">2023_GR_00515 - Aanduiding van een vertegenwoordiger van de Stad Gent op de algemene vergadering van 30 mei 2023 van de Vlaamse Vervoermaatschappij De Lijn  - Bekrachtiging</a>
+            </div>
+            <div class="summary">Aan de gemeenteraad wordt gevraagd de aanduiding van een vertegenwoordiger van de Stad Gent op de algemene vergadering van de Vlaamse Vervoermaatschappij De Lijn 
+ op 30 mei 2023 te bekrachtigen.</div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0508.6453.5468">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">14</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0508.6453.5468" class="title">2023_GR_00514 - Vervanging van een vertegenwoordiger van de Stad Gent in de algemene vergadering van de Vlaamse Vervoermaatschappij De Lijn - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd de vertegenwoordiger van de Stad Gent in de algemene vergadering van de Vlaamse Vervoermaatschappij De Lijn te vervangen.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Financiën</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Team Belastingen Wonen en Economie</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0314.9849.4011">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">18</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0314.9849.4011" class="title">2023_GR_00468 - Reglement - Belasting op de lijkbezorging - Opheffing/ Retributie op grafconcessies (geamendeerd) - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Belasting op de lijkbezorging' op te heffen en de inhoud over te nemen in het reglement 'Retributie op grafconcessies' , met ingang van 1 januari 2023. </p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0526.3012.9811">
+            <div class="item">
+                
+                <div class="position float-left">IR 11</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0526.3012.9811" class="title">2023_AM_00007 - Amendement van het college van burgemeester en schepenen van het gemeenteraadsbesluit betreffende het reglement &#39;Retributie op grafconcessies&#39; </a>
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.8370.8782">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">58</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.8370.8782" class="title">2023_GR_00483 - Reglement &#39;Retributie en tegemoetkoming voor het aanbieden van huishoudelijk afval via IVAGO (geamendeerd) - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement retributie en tegemoetkoming voor het aanbieden van huishoudelijk afval via IVAGO te wijzigen met ingang van 1 juli 2023.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0523.4771.2022">
+            <div class="item">
+                
+                <div class="position float-left">IR 1</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0523.4771.2022" class="title">2023_AM_00006 - Amendement van het college van burgemeester en schepenen van het gemeenteraadsbesluit betreffende het reglement &#39;Retributie en tegemoetkoming voor het aanbieden van huishoudelijk afval via IVAGO&#39;</a>
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0207.9947.3528">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">16</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0207.9947.3528" class="title">2023_GR_00473 - Reglement - Belasting op de banken - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Belasting op de banken' te wijzigen, met ingang van 1 januari 2024.&nbsp;De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0314.2778.9342">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">17</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0314.2778.9342" class="title">2023_GR_00467 - Reglement - Belasting op de afgifte van administratieve stukken - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Belasting op de afgifte van administratieve stukken&#39; te wijzigen, met ingang van 1 juli 2023. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0420.4023.2714">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">20</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0420.4023.2714" class="title">2023_GR_00474 - Reglement - Belasting op het takelen en bewaren van voertuigen - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Belasting op het takelen en bewaren van voertuigen
+' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft hoofdzakelijk de aangepaste indexering.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0420.4768.7219">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">21</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0420.4768.7219" class="title">2023_GR_00430 - Reglement - Belasting op onbebouwde bouwgronden en kavels - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Belasting op onbebouwde bouwgronden en kavels&#39; te wijzigen, met ingang van 1 januari 2024. De wijziging betreft hoofdzakelijk de aangepaste indexering.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0420.2317.3334">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">22</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0420.2317.3334" class="title">2023_GR_00429 - Reglement - Belasting op woningen zonder inschrijving in het bevolkingsregister - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Belasting op woningen zonder inschrijving in het bevolkingsregister' te wijzigen, met ingang van 1 januari 2024. De wijziging betreft hoofdzakelijk de aangepaste indexering.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0216.0924.5139">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">23</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0216.0924.5139" class="title">2023_GR_00416 - Reglement - Retributie voor administratieve diensten verstrekt door de bibliotheek - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor administratieve diensten verstrekt door de bibliotheek' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0222.2898.0010">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">24</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0222.2898.0010" class="title">2023_GR_00417 - Reglement - Retributie met betrekking tot het beschikbaar stellen van stadszalen - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie met betrekking tot het beschikbaar stellen van stadszalen' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0223.3204.0433">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">25</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0223.3204.0433" class="title">2023_GR_00469 - Reglement - Retributie voor diensten verstrekt in de Zwarte Doos - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor diensten verstrekt in de Zwarte Doos' te wijzigen, met ingang van 1 juli 2023.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.6424.0224">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">26</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.6424.0224" class="title">2023_GR_00418 - Reglement - Retributie voor diensten verstrekt door de Educatieve Diensten van het Departement Onderwijs, Opvoeding en Jeugd - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor diensten verstrekt door de Educatieve Diensten van het Departement Onderwijs, Opvoeding en Jeugd' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft hoofdzakelijk de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0228.5934.4795">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">27</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0228.5934.4795" class="title">2023_GR_00318 - Reglement - Retributie voor het gebruik van de stedelijke sportaccommodaties - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor het gebruik van de stedelijke sportaccommodaties' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0330.3854.5055">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">29</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0330.3854.5055" class="title">2023_GR_00476 - Reglement - Retributie voor diensten van administratieve aard van het Departement Samenleven en Welzijn - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Retributie voor diensten van administratieve aard van het Departement Samenleven en Welzijn
+&#39; aan te passen met ingang van 1 juli 2023. De wijzigingen betreffen het opnemen van de dienstverlening van Dienst Asiel en Vluchtelingen, en de stadsbrede indexering van de tarieven.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0330.6508.5784">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">30</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0330.6508.5784" class="title">2023_GR_00432 - Reglement - Retributie voor diensten van administratieve aard van het Departement Bedrijfsvoering - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor diensten van administratieve aard van het Departement Bedrijfsvoering' te wijzigen met ingang van 1 juli 2023.De wijziging betreft het consolideren van bepalingen en de aanpassing van de indexeringsformule.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0405.9867.5386">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">31</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0405.9867.5386" class="title">2023_GR_00472 - Reglement - Retributie voor diensten verstrekt t.g.v. plechtigheden - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Retributie voor diensten verstrekt t.g.v. plechtigheden&#39; te wijzigen, met ingang van 1 juli 2023.&nbsp;De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0405.6546.1671">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">32</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0405.6546.1671" class="title">2023_GR_00420 - Reglement - Retributie voor prestaties geleverd door de Dienst Kinderopvang en het Stedelijk Onderwijs Gent - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor prestaties geleverd door de Dienst Kinderopvang en het Stedelijk Onderwijs Gent' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft hoofdzakelijk de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0412.3290.5372">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">33</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0412.3290.5372" class="title">2023_GR_00470 - Reglement - Retributie voor diensten van technische aard van het Departement Stedelijke Ontwikkeling - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Retributie voor diensten van technische aard van het Departement Stedelijke Ontwikkeling&#39; te wijzigen, met ingang van 1 juli 2023. De wijziging betreft de aanpassing aan de nieuwe indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0413.9095.3881">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">35</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0413.9095.3881" class="title">2023_GR_00423 - Reglement - Retributie voor de elektriciteitsvoorziening van evenementen die plaatsgrijpen op het openbaar domein - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor de elektriciteitsvoorziening van evenementen die plaatsgrijpen op het openbaar domein' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0413.4350.6586">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">36</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0413.4350.6586" class="title">2023_GR_00424 - Reglement - Retributie voor de opstelling van kermisattracties - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor de opstelling van kermisattracties' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0413.8477.0445">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">37</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0413.8477.0445" class="title">2023_GR_00425 - Reglement - Retributie voor diensten van technische aard van het Departement Cultuur, Sport en Vrije Tijd  - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor diensten van technische aard van het Departement Cultuur, Sport en Vrije Tijd' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0418.2205.2635">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">38</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0418.2205.2635" class="title">2023_GR_00426 - Reglement - Retributie voor het gebruik van stadszalen in de Historische Huizen - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor het gebruik van stadszalen in de Historische Huizen' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft hoofdzakelijk een aanpassing van de tarieven aan nieuwe indexeringsafspraken en opname van enkele bijkomende zalen, vergaderruimtes en diensten.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0419.9234.8495">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">39</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0419.9234.8495" class="title">2023_GR_00427 - Reglement - Retributie voor diensten van administratieve en technische aard van het Departement Onderwijs, Opvoeding en Jeugd - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor diensten van administratieve en technische aard van het Departement Onderwijs, Opvoeding en Jeugd' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft hoofdzakelijk de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0419.5205.0514">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">40</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0419.5205.0514" class="title">2023_GR_00471 - Reglement - Retributie op omgevingsvergunningsaanvragen - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Retributie op omgevingsvergunningsaanvragen&#39; te wijzigen, met ingang van 1 juli 2023. De wijziging betreft hoofdzakelijk de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0420.1242.2630">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">41</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0420.1242.2630" class="title">2023_GR_00475 - Reglement - Retributie voor interventies in het kader van de openbare veiligheid - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor interventies in het kader van de openbare veiligheid' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0424.5784.3972">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">42</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0424.5784.3972" class="title">2023_GR_00431 - Reglement - Retributie voor diensten verstrekt door het IVA Historische Huizen Gent - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor diensten verstrekt door het IVA Historische Huizen Gent' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken en schrappen van enkele afgeschafte dienstverleningen.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0405.9553.8566">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">43</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0405.9553.8566" class="title">2023_GR_00421 - Reglement - Retributie voor diensten van administratieve en technische aard van de Jeugddienst - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Retributie voor diensten van administratieve en technische aard van de Jeugddienst&#39; te wijzigen, met ingang van 1 juli 2023. De wijziging betreft hoofdzakelijk de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0508.6617.0990">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">44</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0508.6617.0990" class="title">2023_GR_00477 - Reglement - Retributie voor het plaatsnemen op markten - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor het plaatsnemen op markten' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0314.1926.9128">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">45</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0314.1926.9128" class="title">2023_GR_00433 - Reglement  - Belasting op de pompen - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd de wijziging van het het reglement 'Belasting op de pompen', met ingang van 1 januari 2024 goed te keuren. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+ </p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.9585.7503">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">47</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.9585.7503" class="title">2023_GR_00439 - Reglement - Belasting op de inname van het openbaar domein voor het uitvoeren van werken - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Belasting op de inname van het openbaar domein voor het uitvoeren van werken' te wijzigen, met ingang van 1 juli 2023.&nbsp;De wijziging betreft een aanpassing van de tarieven.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.1381.5233">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">48</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.1381.5233" class="title">2023_GR_00440 - Reglement - Belasting op het verspreiden van niet-geadresseerde drukwerken - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Belasting op het verspreiden van niet-geadresseerde drukwerken' te wijzigen, met ingang van 1 juli 2023.&nbsp;De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.7937.2497">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">49</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.7937.2497" class="title">2023_GR_00482 - Reglement - Belasting op reclame zichtbaar van op de openbare weg  - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Belasting op&nbsp;<span>reclame zichtbaar van op de openbare weg</span>&#39; te wijzigen, met ingang van 1 juli 2023. De wijziging betreft een aanpassing van de tarieven aan de nieuwe indexeringsafspraken.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.7658.1696">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">50</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.7658.1696" class="title">2023_GR_00435 - Reglement - Belasting op film- en erotische voorstellingen - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd de wijziging van het reglement '<span>Belasting op film- en erotische voorstellingen</span>' goed te keuren, met inwerkingtreding op 1 juli 2023. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.3717.9520">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">51</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.3717.9520" class="title">2023_GR_00479 - Reglement - Belasting op de inname van het openbaar domein - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Belasting op de inname van het openbaar domein' te wijzigen, met ingang van &nbsp;1 juli 2023. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0425.0426.8764">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">52</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0425.0426.8764" class="title">2023_GR_00438 - Reglement - Algemene bedrijfsbelasting - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd de &#39;Algemene bedrijfsbelasting&#39; te wijzigen, met ingang van 1 januari 2024.&nbsp;De wijziging betreft een aanpassing van de tarieven aan de nieuwe indexeringsafspraken.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.4566.2759">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">55</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.4566.2759" class="title">2023_GR_00478 - Reglement &#39;Retributie voor het beschikbaar stellen van het &#39;Kuipke&#39; en de &#39;Floraliënhal&#39;  - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie voor het beschikbaar stellen van het "Kuipke" en de "Floraliënhal"'
+ te wijzigen, met ingang van 1 juli 2023. De wijziging betreft de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.5072.8990">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">56</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.5072.8990" class="title">2023_GR_00481 - Reglement &#39;Retributie voor diensten van administratieve aard van het Departement Stedelijke Ontwikkeling&#39;  - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het retributiereglement voor administratieve diensten van het Departement Stedelijke Ontwikkeling voor de aanslagjaren 2023-2025 te wijzigen met inwerkingtreding op 1 juli 2023. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+<br><br></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0406.5078.5454">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">57</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0406.5078.5454" class="title">2023_GR_00441 - Reglement - Retributie op werken aan nutsvoorzieningen op het gemeentelijk openbaar domein - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het retributiereglement op werken aan nutsvoorzieningen op het gemeentelijk openbaar domein te wijzigen met ingang van 1 juli 2023. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+<br><br></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0505.0103.2528">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">59</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0505.0103.2528" class="title">2023_GR_00480 - Reglement -Retributie voor diensten van administratieve aard van het Departement Cultuur, Sport en Vrije Tijd - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het retributiereglement voor dienst van administratieve aard van het Departement Cultuur, Sport en vrije Tijd te wijzigen, met ingang van 1 juli 2023. De wijziging betreft de aangepaste indexering.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0419.4362.3334">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">19</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0419.4362.3334" class="title">2023_GR_00428 - Reglement - Belasting op de nachtwinkels en private bureaus voor telecommunicatie - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Belasting op de nachtwinkels en private bureaus voor telecommunicatie&#39; te wijzigen, met ingang van 1 januari 2024. De wijziging betreft de aangepaste indexering.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0330.2222.5044">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">28</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0330.2222.5044" class="title">2023_GR_00419 - Reglement - Retributie voor diensten van technische aard van het Departement Samenleven en Welzijn - Opheffing</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Retributie voor diensten van technische aard van het Departement Samenleven en Welzijn&#39; op te heffen met ingang van 1 juli 2023. De bepalingen worden overgenomen in de andere toepasselijke retributiereglementen.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0413.9099.6834">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">34</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0413.9099.6834" class="title">2023_GR_00422 - Reglement - Retributie op de inname van de openbare weg voor ambulante handel - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement 'Retributie op de inname van de openbare weg voor ambulante handel' te wijzigen, met ingang van 1 juli 2023. De wijziging betreft de aangepaste indexering.</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.9747.4951">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">46</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.9747.4951" class="title">2023_GR_00434 - Reglement  - Belasting op het openhouden van drankslijterijen na het gewoon sluitingsuur - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Belasting op het openhouden van drankslijterijen na het gewoon sluitingsuur&#39; te wijzigen, met ingang van 1 januari 2024. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+</p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.0729.9145">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">53</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.0729.9145" class="title">2023_GR_00436 - Reglement - Retributie met betrekking tot de door de politie uitgevoerde opdrachten van bestuurlijke politie zoals bepaald in het K.B. van 14 september 1997 - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het&nbsp;Retributiereglement&nbsp;met betrekking tot de door de politie uitgevoerde opdrachten van bestuurlijke politie zoals bepaald in het K.B. van 14 september 1997 te wijzigen met ingang van 1 juli 2023.&nbsp;De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+<br><br></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0327.9499.3733">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">54</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.9499.3733" class="title">2023_GR_00437 - Reglement-  Retributie voor opsluitingen in het stedelijk bewaarhuis - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het retributiereglement voor opsluitingen in het stedelijk bewaarhuis te wijzigen met ingang van 1 juli 2023. De wijziging betreft een aanpassing van de tarieven aan nieuwe indexeringsafspraken.
+<br><br></p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>IVA Mobiliteitsbedrijf</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Straatparkeren</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0425.4885.6459">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">72</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0425.4885.6459" class="title">2023_GR_00445 - Vastgestelde gemeentelijke aanvullende reglementen op het wegverkeer - Rapportering over de periode 13 maart 2023 t.e.m. 26 april 2023 - Kennisneming</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd kennis te nemen van de rapportering over de periode 23 maart 2023 t.e.m. 26 april 2023 van de door het college van burgemeester en schepenen vastgestelde aanvullende reglementen op het wegverkeer op de gewest- en gemeentewegen die zich op het grondgebied van de stad Gent bevinden.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Stedelijke Ontwikkeling</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Stedenbouw en Ruimtelijke Planning</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0327.1284.7108">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">81</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0327.1284.7108" class="title">2023_GR_00449 - &#39;Bouwblokvisie voor verweven en vergroenen - Meer leefkwaliteit creëren in dichtbevolkte wijken&#39; - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan  de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de 'Bouwblokvisie voor verweven en vergroenen - Meer leefkwaliteit creëren in dichtbevolkte wijken'.</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Economie</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0502.7585.7623">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">91</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0502.7585.7623" class="title">2023_GR_00505 - Visie op landbouw in en rond Gent - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het document &#39;Visie op landbouw in en rond Gent&#39; goed te keuren. Er wordt ook gevraagd  het &#39;Operationeel plan acties 2023-2025&#39; dat op korte termijn aan de Gentse landbouwvisie gekoppeld wordt&nbsp;goed &nbsp;te keuren en het document met feedback van de stakeholders en de reactie van de Stad Gent hierop.</p></div>
+        </li>
+    </ul>
+    
+
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Toezicht Wonen, Bouwen en Milieu</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0504.8601.3228">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">92</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0504.8601.3228" class="title">2023_GR_00485 - Verordening Verplicht Conformiteitsattest - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd om goedkeuring te verlenen aan de verordening Verplicht Conformiteitsattest met ingang vanaf 1 oktober 2023.</p><p>Voor elke zelfstandige woning, ouder dan 30 jaar, die verhuurd of ter beschikking gesteld wordt als hoofdverblijfplaats, moet een geldig conformiteitsattest kunnen worden voorgelegd bij elke (eerste) nieuwe verhuring of terbeschikkingstelling vanaf 1 oktober 2023.</p><p>Voor woningen waarvoor reeds een geldig conformiteitsattest beschikbaar is, geldt de verplichting pas op het moment dat het conformiteitsattest vervalt en bij nieuwe verhuring of ter beschikkingstelling.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Cultuur, Sport en Vrije Tijd</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Toerisme</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0413.7877.8098">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">96</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0413.7877.8098" class="title">2023_GR_00506 - Aangepast subsidiereglement voor de ondersteuning van toeristisch logies en MICE locaties in de Green Key en Green Globe programma&#39;s voor de periode 2023-2025 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>
+Aan de gemeenteraad wordt gevraagd een aangepast &#39;subsidiereglement voor de ondersteuning van toeristisch logies en MICE locaties in de Green Key en Green Globe programma&#39;s voor de periode 2023-2025&#39; goed te keuren met inwerkingtreding op 1 juli 2023.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Welzijn en Samenleving</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Preventie voor Veiligheid</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0306.9240.4312">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">105</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0306.9240.4312" class="title">2023_GR_00496 - Subsidieovereenkomst  voor de werking van de KAA Gent Foundation voor de periode 2020-2025 - Addendum werkingsjaar 2023 - versterken begeleiders buurtbalinitiatieven  - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het addendum goed te keuren bij de subsidieovereenkomst met KAA Gent cvba so en vzw Voetbal in de stad, beide met zetel Ottergemsesteenweg Zuid 808 te 9000 Gent, voor de werking van de KAA Gent Foundation - periode 2020-2025, meer bepaald voor het versterken van de begeleiders van buurtbalinitiatieven door middel van een sociaal-sportieve methodiek - looptijd: van 01/06/2023 tot en met 31/12/2023, waarbij een subsidie wordt toegekend van 20.000,00 euro. 
+</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>AGB Erfgoed</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Zakelijke Werking</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0427.5031.0857">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">110</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0427.5031.0857" class="title">2023_GR_00456 - Wijziging van de grondregels voor de tarieven van het AGB Erfgoed - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te geven aan de gewijzigde grondregels voor de tarieven van het AGB Erfgoed. Dit ter invulling van artikel 19, e uit de beheersovereenkomst 2020-2025.&nbsp;</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>AGB Kunsten en Design</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Zakelijke Werking</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0502.1730.9336">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">113</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0502.1730.9336" class="title">2023_GR_00457 - Wijziging van de grondregels voor de tarieven van het AGB Kunsten en Design - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te geven aan de gewijzigde grondregels voor de tarieven van het AGB Kunsten en Design. Dit ter invulling van artikel 19, e uit de beheersovereenkomst 2020-2025.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Gezondheid en Zorg</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Dienst Regie Gezondheid en Zorg</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0426.3069.5330">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">115</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0426.3069.5330" class="title">2023_GR_00443 - Samenwerkingsovereenkomst Student in Warme Stad - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd de hier bijgevoegde samenwerkingsovereenkomst Student in Warme Stad Gent met Logo Gezond+ vzw, Fonds GavoorGeluk, Universiteit Gent, Hogeschool Gent, Arteveldehogeschool, Odisee en Luca School of Arts vzw goed te keuren.&nbsp;</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>(onder) voorzitter gemeenteraad en raad voor maatschappelijk welzijn</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>(onder) voorzitter gemeenteraad en raad voor maatschappelijk welzijn</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0502.1306.9141">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">120</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0502.1306.9141" class="title">2023_GR_00403 - Benoeming van leden in de algemene commissies en bijzondere commissies - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd aangeduide leden in algemene commissies te vervangen.
+</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+
+    
+    
+        
+        
+        <h4>Bevoegdheid Stad en OCMW</h4>
+        
+        
+        
+    
+    
+        
+        
+        
+        <h5>Departement Financiën</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Team Belastingen Wonen</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0207.6570.9792">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">122</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0207.6570.9792" class="title">2023_GR_00484 - Reglement &#39;Retributie en tarief voor het verstrekken van administratieve gegevens en publicaties&#39; - Wijziging</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd het reglement &#39;Retributie en tarief voor&nbsp;<span>het verstrekken van administratieve gegevens en publicaties&#39; te wijzigen met ingang van 1 juli 2023. De wijzigingen betreffen de herijking van de indexering van de tarieven.</span><br><br></p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Bedrijfsvoering</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Juridische Dienst</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0417.0270.6813">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">124</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0417.0270.6813" class="title">2023_GR_00400 - Dienstverlenende vereniging TMVS  - algemene vergadering van 20 juni 2023 - vaststelling van het mandaat van de vertegenwoordiger van Stad Gent - Goedkeuring</a>
+            </div>
+            <div class="summary"><p><span>Aan de gemeenteraad  wordt voorgesteld om de dagorde van de algemene vergadering van TMVS die plaatsvindt op dinsdag 20 juni 2023 om 17u30 (fysiek of via digitaal Zoom), evenals het mandaat van de vertegenwoordiger van de Stad Gent op voormelde algemene vergadering goed te keuren.</span></p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+    
+        
+        
+        
+        <h5>Departement Welzijn en Samenleving</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Lokaal sociaal beleid</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0425.6035.0590">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">125</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0425.6035.0590" class="title">2023_GR_00414 - Subsidieovereenkomsten in kader van het project Lekker(s) op School - periode 1 september 2023 - 30 juni 2024 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de subsidieovereenkomsten in kader van het project Lekker(s) op School met </p><ul><li>vzw Impuls (basisschool Dokata / Sint-Salvator), Sint Salvatorstraat 14A, 9000 Gent</li><li>basisschool Sint-Lievenscollege, Keizer Karelstraat 12, 9000 Gent, van vzw Scholengroep van het Katholiek Onderwijs in Gent (SKOG), met zetel te Tentoonstellingslaan 2, 9000 Gent</li><li>Katholieke Scholen Regio Gent-West vzw (basisschool Het Klimrek), Reinaertstraat 26 te 9000 Gent</li><li>MPI De Oase, Voskenslaan 362 te 9000 Gent</li><li>GO! basisschool De Kleine Icarus van GO! Scholengroep Gent, Schoonmeerstraat 26, 9000 Gent</li></ul><p>waarbij subsidies worden toegekend van in totaal 195.790 euro. <em> </em></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0425.9599.0740">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">126</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0425.9599.0740" class="title">2023_GR_00415 - Subsidieovereenkomsten met basisscholen De Mozaïek en Onze-Lieve-Vrouwcollege in kader van het project Lekker(s) op School - periode 1 september 2023 - 30 juni 2024 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan de subsidieovereenkomsten in kader van het project Lekker(s) op School met</p><ul><li>&nbsp;Scholengroep van het Katholiek Onderwijs (basisschool Onze-Lieve-Vrouwcollege), Tentoonstellingslaan 2 te 9000 Gent</li><li>basisschool De Mozaïek, Sint-Margrietstraat 33 te 9000 Gent</li></ul><p>waarbij subsidies worden toegekend van in totaal 53.111 euro.</p><p><em>&nbsp;</em></p></div>
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0421.2191.9407">
+            <div class="item">
+                <button class="show-summary float-right" title="Samenvatting weergeven" aria-expanded="false"><span class="sr-only">Samenvatting weergeven</span><i class="fas fa-plus"></i></button>
+                <div class="position float-left">127</div>
+                
+                <a href="/zittingen/22.0913.1602.1677/agendapunten/23.0421.2191.9407" class="title">2023_GR_00413 - Masterconvenant met CAW Oost-Vlaanderen vzw voor verschillende deelwerkingen voor het werkingsjaar 2023 - Addendum voor Begeleiding van niet-begeleide-minderjarigen en hun gezin voor en na gezinshereniging  voor het werkingsjaar 2023 - Goedkeuring</a>
+            </div>
+            <div class="summary"><p>Aan de gemeenteraad wordt gevraagd goedkeuring te verlenen aan het addendum bij de masterconvenant &nbsp;voor verschillende deelwerkingen voor het werkingsjaar 2023 met Centrum voor Algemeen Welzijnswerk Oost-Vlaanderen vzw, voor begeleiding van niet-begeleide minderjarigen en hun gezin voor en na gezinshereniging, Visserij 153 te 9000 Gent, voor het werkingsjaar 2023, waarbij een subsidie wordt toegekend van 57.000 euro.</p></div>
+        </li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+        <h2>Besloten vergadering</h2>
+        
+        
+        
+        
+        
+    
+    
+        
+        <h3>B-punten</h3>
+        
+        
+        
+        
+    
+    
+        
+        
+        <h4>Bevoegdheid Stad</h4>
+        
+        
+        
+    
+    
+        
+        
+        
+        <h5>Politie - Directie Beheer</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>HRM</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0404.5351.8212">
+            <div class="item not-published">
+                
+                <div class="position float-left">128</div>
+                <a class="title">2023_GR_00489 - Operationeel en administratief en logistiek kader - Uitdiensttredingen - Kennisneming</a>
+                
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0503.0289.9400">
+            <div class="item not-published">
+                
+                <div class="position float-left">129</div>
+                <a class="title">2023_GR_00491 - Administratief en logistiek kader - Ambtsneerlegging - Vrijwillig ontslag - Kennisneming</a>
+                
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0510.1547.2383">
+            <div class="item not-published">
+                
+                <div class="position float-left">130</div>
+                <a class="title">2023_GR_00511 - Ambtsneerlegging - vervroegd rustpensioen - DJ - Kennisneming</a>
+                
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0503.1305.2259">
+            <div class="item not-published">
+                
+                <div class="position float-left">131</div>
+                <a class="title">2023_GR_00494 - Valorisatie burgerdiensten -  administratief en logistiek kader - (VAL46/SH)  - Goedkeuring</a>
+                
+            </div>
+            
+        </li>
+        <li class="agendapage" data-meeting-item-id="23.0503.6626.7423">
+            <div class="item not-published">
+                
+                <div class="position float-left">132</div>
+                <a class="title">2023_GR_00495 - Valorisatie burgerdiensten -  administratief en logistiek kader - (VAL46/IY)  - Goedkeuring</a>
+                
+            </div>
+            
+        </li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+    
+        
+        <h3>A-punten</h3>
+        
+        
+        
+        
+    
+    
+        
+        
+        <h4>Bevoegdheid Stad</h4>
+        
+        
+        
+    
+    
+        
+        
+        
+        <h5>Bedrijfsvoering</h5>
+        
+        
+    
+    
+        
+        
+        
+        
+        <h6>Juridische Dienst</h6>
+        
+    <ul>
+        <li class="agendapage" data-meeting-item-id="23.0302.2372.0324">
+            <div class="item not-published">
+                
+                <div class="position float-left">1</div>
+                <a class="title">2023_GR_00446 - Dading over de aanneming parkeergebouw Ledeberg - Goedkeuring</a>
+                
+            </div>
+            
+        </li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+                    </div>
+                    
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- LBLOB Publications -->
+            <div class="row" prefix="lblodBesluit: http://lblod.data.gift/vocabularies/besluit/">
+                <div class="col-12">
+                    <h2 class="publications">Publicaties</h2>
+                    <div class="publication-group">
+                        <div class="group-name">Agenda</div>
+                        <ul class="publications">
+                            <li class="publication lblod">
+                                <!-- LBLOD NOT ADDITIONAL_AGENDA AND NOT URGENT_AGENDA -->
+                                <a href="/zittingen/22.0913.1602.1677/agenda" property="lblodBesluit:linkToPublication">Agenda</a>
+
+                                <!-- Single LBLOD ADDITIONAL_AGENDA -->
+                                
+
+                                <!-- Multiple LBLOD ADDITIONAL_AGENDA -->
+                                
+                                
+
+                                <!-- Single LBLOD URGENT_AGENDA -->
+                                
+
+                                <!-- single document -->
+                                
+
+                                <!-- multiple documents -->
+                                
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="publication-group">
+                        <div class="group-name">Bijkomende agenda</div>
+                        <ul class="publications">
+                            <li class="publication lblod">
+                                <!-- LBLOD NOT ADDITIONAL_AGENDA AND NOT URGENT_AGENDA -->
+                                
+
+                                <!-- Single LBLOD ADDITIONAL_AGENDA -->
+                                
+
+                                <!-- Multiple LBLOD ADDITIONAL_AGENDA -->
+                                <a data-toggle="dropdown">
+                                    <span class="text d-md-inline-block">Bijkomende agenda</span><span class="badge badge-secondary">2</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="/zittingen/22.0913.1602.1677/bijkomendeagenda/23.0526.9140.9227" property="lblodBesluit:linkToPublication" class="dropdown-item">Bijkomende agenda 26-05-2023</a><a href="/zittingen/22.0913.1602.1677/bijkomendeagenda/23.0530.1372.9927" property="lblodBesluit:linkToPublication" class="dropdown-item">Bijkomende agenda 30-05-2023</a>
+                                </div>
+
+                                <!-- Single LBLOD URGENT_AGENDA -->
+                                
+
+                                <!-- single document -->
+                                
+
+                                <!-- multiple documents -->
+                                
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="publication-group">
+                        <div class="group-name">Besluitenlijst</div>
+                        <ul class="publications">
+                            <li class="publication lblod">
+                                <!-- LBLOD NOT ADDITIONAL_AGENDA AND NOT URGENT_AGENDA -->
+                                <a href="/zittingen/22.0913.1602.1677/besluitenlijst" property="lblodBesluit:linkToPublication">Besluitenlijst</a>
+
+                                <!-- Single LBLOD ADDITIONAL_AGENDA -->
+                                
+
+                                <!-- Multiple LBLOD ADDITIONAL_AGENDA -->
+                                
+                                
+
+                                <!-- Single LBLOD URGENT_AGENDA -->
+                                
+
+                                <!-- single document -->
+                                
+
+                                <!-- multiple documents -->
+                                
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <footer>
+    
+
+    <div class="container">
+        <div class="copyright">
+            &copy;&nbsp;<a href="https://www.greenvalleybelgium.be" target="_blank">Green Valley Belgium</a>
+        </div>
+        <div class="contact"></div>
+    </div>
+</footer>
+    <script>
+        var $webcastIndex = 0;
+        var $webcasts = [{"id":"1588","code":"stadgent\/20230530_2","webcastId":"5ebf2c6c-a35b-49cd-89de-1ae36ec837cc","meeting":{"id":"22.0913.1602.1677","organ":{"id":"15.1217.9161.0380","name":"gemeenteraad","shortName":"GR"},"title":"30 mei 2023 19:00","description":"","dateTime":"2023-05-30T19:00:00","location":"gemeenteraadszaal","hasAgenda":false,"hasDecisionList":false,"hasMinutes":false,"openForPublic":true,"imported":false,"notPublished":false},"agendaPageId":null,"status":"ENDED","startTime":null,"endTime":null,"type":"ROYALCAST","instance":"","name":"30 mei 2023 19:00"},{"id":"1592","code":"stadgent\/20230531_2","webcastId":"e8b0f091-2abf-4053-872d-975563d4a8b3","meeting":{"id":"22.0913.1602.1677","organ":{"id":"15.1217.9161.0380","name":"gemeenteraad","shortName":"GR"},"title":"30 mei 2023 19:00","description":"","dateTime":"2023-05-30T19:00:00","location":"gemeenteraadszaal","hasAgenda":false,"hasDecisionList":false,"hasMinutes":false,"openForPublic":true,"imported":false,"notPublished":false},"agendaPageId":null,"status":"ENDED","startTime":null,"endTime":null,"type":"ROYALCAST","instance":"","name":"30 mei 2023 19:00"}];
+        var $showSummaryLabel = "Samenvatting weergeven";
+        var $hideSummaryLabel = "Samenvatting verbergen";
+        var $webcastPosition = "Webcast {0} van {1}";
+        var $webcastTitle = "Webcast bekijken";
+        var $webcastFragment = "Fragment {0}";
+    </script>
+</body>
+</html>
